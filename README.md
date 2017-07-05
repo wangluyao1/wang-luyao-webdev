@@ -1,8 +1,7 @@
-# web-dev-template
+Hi, I am Luyao Wang.
+I am a graduate student majored in Computer Science in Northeastern University.
 
-1. git clone https://github.com/jannunzi/web-dev-template.git
-1. cd web-dev-template
-1. npm install
-1. mongod
-1. node server.js
-1. browse to localhost:3000
+This repository is for submitting CS5610 web development assignments and project.
+
+Root to the hosted environment on Heroku: 
+
