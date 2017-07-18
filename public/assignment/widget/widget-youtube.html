@@ -2,39 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>New Page</title>
+    <title>Edit Page</title>
     <!--<link href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel = "stylesheet">-->
     <link href="../../vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/style.css" rel="stylesheet"/>
 </head>
 
 <body>
+<div class="wl wl-page-edit">
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xs-3 visible-lg">
             <!--<div class="wl">-->
-                <a href="page-list.html"
+                <a href="widget-list.html"
                    class="navbar-brand">
                     <span class="pull-left glyphicon glyphicon-chevron-left"></span>
                 </a>
             <!--</div>-->
             <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-brand">Pages</div>
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a href="website-new.html">
-                        <span class="pull-right glyphicon glyphicon-plus"></span>
-                    </a>
-                </li>
-            </ul>
+            <div class="navbar-brand">Choose Widget</div>
         </div>
                 <div class="col-lg-9 visible-lg">
                     <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-brand">New Page</div>
+                    <div class="navbar-brand">Widget Editing</div>
                     <ul class="nav navbar-nav navbar-right">
                         <li>
-                            <a href="page-list.html">
+                            <a href="widget-list.html">
                                 <span class="pull-right glyphicon glyphicon-ok"></span>
                             </a>
                         </li>
@@ -44,21 +38,21 @@
                     <nav class="navbar navbar-default navbar-fixed-top">
                         <div class="container-fluid">
                             <div class="wl">
-                                <a href="page-list.html"
+                                <a href="widget-list.html"
                                    class="navbar-brand">
                                     <span class="pull-left glyphicon glyphicon-chevron-left"></span>
                                 </a>
                             </div>
                             <!-- Brand and toggle get grouped for better mobile display -->
-                            <div class="navbar-brand">New Page</div>
+                            <div class="navbar-brand">Widget Editing</div>
                             <ul class="nav navbar-nav navbar-right">
                                 <li>
-                                    <a href="page-list.html">
+                                    <a href="widget-list.html">
                                         <span class="pull-right glyphicon glyphicon-ok"></span>
                                     </a>
                                 </li>
                             </ul>
-                        </div>
+                        </div><!-- /.container-fluid -->
                     </nav>
                 </div>
             </div>
@@ -70,49 +64,36 @@
         <div class="row">
             <div class="col-xs-3 visible-lg">
                 <ul class="list-group">
-                    <li class="list-group-item active">
-                        <div class="row">
-                            <div class="col-xs-10">Name</div>
-                            <div class="col-xs-2">
-                                <a href="website-new.html">
-                                    <span class="pull-right glyphicon glyphicon-plus"></span>
-                                </a>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="list-group-item">
-                        <div class="row">
-                            <div class="col-xs-10">Blog Post</div>
-                            <div class="col-xs-2"><span class="pull-right glyphicon glyphicon-cog"></span></div>
-                        </div>
-                    </li>
-
-                    <li class="list-group-item">
-                        <div class="row">
-                            <div class="col-xs-10">Blogs</div>
-                            <div class="col-xs-2"><span class="pull-right glyphicon glyphicon-cog"></span></div>
-                        </div>
-                    </li>
-                    <li class="list-group-item">
-                        <div class="row">
-                            <div class="col-xs-10">Home</div>
-                            <div class="col-xs-2"><span class="pull-right glyphicon glyphicon-cog"></span></div>
-                        </div>
-                    </li>
-                    <li class="list-group-item">
-                        <div class="row">
-                            <div class="col-xs-10">About</div>
-                            <div class="col-xs-2"><span class="pull-right glyphicon glyphicon-cog"></span></div>
-                        </div>
-                    </li>
-
-                    <li class="list-group-item">
-                        <div class="row">
-                            <div class="col-xs-10">Contact Us</div>
-                            <div class="col-xs-2"><span class="pull-right glyphicon glyphicon-cog"></span></div>
-                        </div>
-                    </li>
+                    <ul class="list-group-item">
+                        <a href="widget-heading.html">Header</a>
+                    </ul>
+                    <ul class="list-group-item">
+                        <a href="">Label</a>
+                    </ul>
+                    <ul class="list-group-item">
+                        <a href="">HTML</a>
+                    </ul>
+                    <ul class="list-group-item">
+                        <a href="">Text Input</a>
+                    </ul>
+                    <ul class="list-group-item">
+                        <a href="">Link</a>
+                    </ul>
+                    <ul class="list-group-item">
+                        <a href="">Button</a>
+                    </ul>
+                    <ul class="list-group-item">
+                        <a href="widget-image.html">Image</a>
+                    </ul>
+                    <ul class="list-group-item">
+                        <a href="widget-youtube.html">YouTube</a>
+                    </ul>
+                    <ul class="list-group-item">
+                        <a href="">Data Table</a>
+                    </ul>
+                    <ul class="list-group-item">
+                        <a href="">Repeater</a>
+                    </ul>
                 </ul>
                 </div>
 
@@ -122,15 +103,24 @@
                 <input type="text"
                        id="name"
                        class="form-control"
-                       placeholder="Page Name"/>
-                <label for="title">Title</label>
+                       placeholder=""
+                       />
+                <label for="text">Text</label>
                 <input type="text"
-                          id="title"
+                          id="text"
                           class="form-control"
-                          placeholder="Page Title"></input>
+                          placeholder="text"></input>
+                    <label for="size">Size</label>
+                    <input type="number"
+                           id="size"
+                           class="form-control"
+                           placeholder="size"
+                    value="3">
+                    </input>
+                    <a class="btn btn-danger btn-block"
+                    href="widget-list.html">Delete</a>
             </div>
         </div>
-
     </div>
 
     <nav class="navbar navbar-default navbar-fixed-bottom">
@@ -141,8 +131,9 @@
                     <span class="pull-right glyphicon glyphicon-user"></span>
                 </a></li>
             </ul>
-        </div>
+        </div><!-- /.container-fluid -->
     </nav>
+</div>
 
 
 </body>

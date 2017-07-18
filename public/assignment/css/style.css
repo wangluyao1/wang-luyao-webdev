@@ -26,3 +26,23 @@ body {
 .wl>a {
     color: #f5f5f5;
 }
+
+.wl .widget{
+    margin-bottom: 10px;
+    margin-top: 15px;
+    padding-bottom: 5px;
+}
+.wl .widget-toolbar{
+    position: absolute;
+    right: 15px;
+    z-index: 1;
+    background: white;
+}
+
+.wl .widget>img{
+    width: 100%;
+}
+
+.wl .away-from-footer{
+    padding-bottom: 60px;
+}
