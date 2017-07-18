@@ -1,0 +1,28 @@
+input {
+    margin-bottom: 5px;
+}
+
+textarea {
+    margin-bottom: 5px;
+}
+
+body {
+    padding-top : 60px;
+}
+
+.wl .navbar-default{
+    background-color: #337ab7;
+    border-color: ghostwhite;
+}
+
+.wl .navbar-default .navbar-brand {
+    color: #f5f5f5;
+}
+
+.wl .navbar-default .navbar-nav>li>a {
+    color: #f5f5f5;
+}
+
+.wl>a {
+    color: #f5f5f5;
+}
