@@ -2,26 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Edit Page</title>
+    <title>Edit Website</title>
     <!--<link href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel = "stylesheet">-->
-    <link href="../../vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../../vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/style.css" rel="stylesheet"/>
 </head>
 
 <body>
-<div class="wl wl-page-edit">
+<div class="wl wl-website-edit">
+
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-xs-3 visible-lg">
+                <div class="col-xs-4 hidden-xs">
             <!--<div class="wl">-->
-                <a href="../user/profile.html"
+                <a href="website-list.html"
                    class="navbar-brand">
                     <span class="pull-left glyphicon glyphicon-chevron-left"></span>
                 </a>
             <!--</div>-->
             <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-brand">Pages</div>
+            <div class="navbar-brand">Websites</div>
             <ul class="nav navbar-nav navbar-right">
                 <li>
                     <a href="website-new.html">
@@ -30,31 +31,31 @@
                 </li>
             </ul>
         </div>
-                <div class="col-lg-9 visible-lg">
+                <div class="col-lg-8 hidden-xs">
                     <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-brand">Edit Page</div>
+                    <div class="navbar-brand">Edit Website</div>
                     <ul class="nav navbar-nav navbar-right">
                         <li>
-                            <a href="page-list.html">
+                            <a href="website-list.html">
                                 <span class="pull-right glyphicon glyphicon-ok"></span>
                             </a>
                         </li>
                     </ul>
                 </div>
-                <div class="col-xs-12 hidden-lg">
+                <div class="col-xs-12 visible-xs">
                     <nav class="navbar navbar-default navbar-fixed-top">
                         <div class="container-fluid">
                             <div class="wl">
-                                <a href="../user/profile.html"
-                                   class="navbar-brand">
+                                <a href="website-list.html"
+                                   class="navbar-brand wl-navLeft">
                                     <span class="pull-left glyphicon glyphicon-chevron-left"></span>
                                 </a>
                             </div>
                             <!-- Brand and toggle get grouped for better mobile display -->
-                            <div class="navbar-brand">Edit Page</div>
-                            <ul class="nav navbar-nav navbar-right">
+                            <div class="navbar-brand wl-navLeft">Edit Website</div>
+                            <ul class="nav navbar-nav pull-right wl-navRight">
                                 <li>
-                                    <a href="page-list.html">
+                                    <a href="website-list.html">
                                         <span class="pull-right glyphicon glyphicon-ok"></span>
                                     </a>
                                 </li>
@@ -69,11 +70,11 @@
     <div class="container-fluid">
 
         <div class="row">
-            <div class="col-xs-3 visible-lg">
+            <div class="col-xs-4 hidden-xs">
                 <ul class="list-group">
                     <li class="list-group-item active">
                         <div class="row">
-                            <div class="col-xs-10">Page Name</div>
+                            <div class="col-xs-10">Website Name</div>
                             <div class="col-xs-2">
                                 <a href="website-new.html">
                                     <span class="pull-right glyphicon glyphicon-plus"></span>
@@ -84,53 +85,57 @@
 
                     <li class="list-group-item">
                         <div class="row">
-                            <div class="col-xs-10">Blog Post</div>
-                            <div class="col-xs-2"><span class="pull-right glyphicon glyphicon-cog"></span></div>
+                            <div class="col-xs-10"><a href="../page/page-list.html">Blogging App</a></div>
+                            <div class="col-xs-2"><a href="website-edit.html"> <span class="pull-right glyphicon glyphicon-cog"></span>
+                            </a>
+                            </div>
                         </div>
                     </li>
 
                     <li class="list-group-item">
                         <div class="row">
-                            <div class="col-xs-10">Blogs</div>
-                            <div class="col-xs-2"><span class="pull-right glyphicon glyphicon-cog"></span></div>
+                            <div class="col-xs-10"><a href="../page/page-list.html">Address Book App</a></div>
+                            <div class="col-xs-2"><a href="website-edit.html"> <span class="pull-right glyphicon glyphicon-cog"></span>
+                            </a></div>
                         </div>
                     </li>
                     <li class="list-group-item">
                         <div class="row">
-                            <div class="col-xs-10">Home</div>
-                            <div class="col-xs-2"><span class="pull-right glyphicon glyphicon-cog"></span></div>
+                            <div class="col-xs-10"><a href="../page/page-list.html">Script Testing App</a></div>
+                            <div class="col-xs-2"><a href="website-edit.html"> <span class="pull-right glyphicon glyphicon-cog"></span>
+                            </a></div>
                         </div>
                     </li>
                     <li class="list-group-item">
                         <div class="row">
-                            <div class="col-xs-10">About</div>
-                            <div class="col-xs-2"><span class="pull-right glyphicon glyphicon-cog"></span></div>
-                        </div>
-                    </li>
-                    <li class="list-group-item">
-                        <div class="row">
-                            <div class="col-xs-10">Contact Us</div>
-                            <div class="col-xs-2"><span class="pull-right glyphicon glyphicon-cog"></span></div>
+                            <div class="col-xs-10"><a href="../page/page-list.html">Blogger</a></div>
+                            <div class="col-xs-2"><a href="website-edit.html"> <span class="pull-right glyphicon glyphicon-cog"></span>
+                            </a></div>
                         </div>
                     </li>
                 </ul>
                 </div>
 
 
-                <div class="col-xs-12 col-lg-9">
-                <label for="name">Name</label>
-                <input type="text"
+                <div class="col-xs-12 col-sm-8">
+                <label for="name">Website Name</label>
+                <input name="name"
+                        type="text"
                        id="name"
                        class="form-control"
-                       value="Blog Post"
+                       placeholder="Name"
+                       value="Blogger"
                        />
-                <label for="title">Website Description</label>
-                <input type="text"
-                          id="title"
+                <label for="description">Website Description</label>
+                <textarea name="description"
+                          type="text"
+                          rows="5" ;
+                          id="description"
                           class="form-control"
-                          placeholder="Page Title"></input>
+                          placeholder="Description">Blogger is a Before we can start any of the fancy editing, we need to make a simple navigation bar with all of your pages linked in. If you’re wanting to link to a specific type of post(lifestyle, recipe, fashion, etc.), make sure you’ve already added tags to those posts so they’ll show up when we link to them!Before we can start any of the fancy editing, we need to make a simple navigation bar with all of your pages linked in. If you’re wanting to link to a specific type of post (lifestyle, recipe, fashion, etc.), make sure you’ve already added tags to those posts so they’ll show up when we link to them!
+                </textarea>
                     <a class="btn btn-danger btn-block"
-                    href="page-list.html">Delete</a>
+                    href="website-list.html">Delete</a>
             </div>
         </div>
     </div>
@@ -138,8 +143,8 @@
     <nav class="navbar navbar-default navbar-fixed-bottom">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="../website/website-new.html">
+            <ul class="nav navbar-nav pull-right wl-navRight">
+                <li><a href="../user/profile.html">
                     <span class="pull-right glyphicon glyphicon-user"></span>
                 </a></li>
             </ul>

@@ -4,29 +4,28 @@
     <meta charset="UTF-8">
     <title>Widget-image</title>
     <!--<link href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel = "stylesheet">-->
-    <link href="../../vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../../vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/style.css" rel="stylesheet"/>
 </head>
 
 <body>
-<div class="wl wl-page-edit">
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xs-3 visible-lg">
             <!--<div class="wl">-->
                 <a href="widget-list.html"
-                   class="navbar-brand">
+                   class="navbar-brand wl-navLeft">
                     <span class="pull-left glyphicon glyphicon-chevron-left"></span>
                 </a>
             <!--</div>-->
             <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-brand">Choose Widget</div>
+            <div class="navbar-brand wl-navLeft">Choose Widget</div>
         </div>
                 <div class="col-lg-9 visible-lg">
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <div class="navbar-brand">Widget Editing</div>
-                    <ul class="nav navbar-nav navbar-right">
+                    <ul class="nav navbar-nav pull-right wl-navRight">
                         <li>
                             <a href="widget-list.html">
                                 <span class="pull-right glyphicon glyphicon-ok"></span>
@@ -37,15 +36,15 @@
                 <div class="col-xs-12 hidden-lg">
                     <nav class="navbar navbar-default navbar-fixed-top">
                         <div class="container-fluid">
-                            <div class="wl">
+                            <div class="wl wl-navLeft">
                                 <a href="widget-list.html"
-                                   class="navbar-brand">
+                                   class="navbar-brand wl-navLeft">
                                     <span class="pull-left glyphicon glyphicon-chevron-left"></span>
                                 </a>
-                            </div>
                             <!-- Brand and toggle get grouped for better mobile display -->
-                            <div class="navbar-brand">Widget Editing</div>
-                            <ul class="nav navbar-nav navbar-right">
+                            <div class="navbar-brand wl-navLeft">Widget Editing</div>
+                            </div>
+                            <ul class="nav navbar-nav pull-right wl-navRight">
                                 <li>
                                     <a href="widget-list.html">
                                         <span class="pull-right glyphicon glyphicon-ok"></span>
@@ -103,7 +102,7 @@
                 <input type="text"
                        id="name"
                        class="form-control"
-                       placeholder=""
+                       placeholder="name"
                        />
                 <label for="text">Text</label>
                 <input type="text"
@@ -115,12 +114,13 @@
                            id="url"
                            class="form-control"
                            placeholder="url"
-                    value="http://">
+                    value="http://i.kinja-img.corn/gawker-media/image">
                     </input>
                     <label for="width">Width</label>
-                    <input type="number"
+                    <input type="text"
                            id="width"
                            class="form-control"
+                           placeholder="width"
                            value="100%">
                     </input>
                     <label for="upload">Upload</label>
@@ -140,14 +140,13 @@
     <nav class="navbar navbar-default navbar-fixed-bottom">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav pull-right wl-navRight">
                 <li><a href="../website/website-new.html">
                     <span class="pull-right glyphicon glyphicon-user"></span>
                 </a></li>
             </ul>
         </div><!-- /.container-fluid -->
     </nav>
-</div>
 
 
 </body>

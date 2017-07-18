@@ -4,21 +4,22 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <!--<link href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel = "stylesheet">-->
-    <link href="../../vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../../vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/style.css" rel="stylesheet"/>
 </head>
 
+<body>
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
-        <div class="wl">
-        <a href="page-list.html"
-           class="navbar-brand">
+        <div class="wl wl-navLeft">
+        <a href="../page/page-list.html"
+           class="navbar-brand wl-navLeft">
             <span class="pull-left glyphicon glyphicon-chevron-left"></span>
         </a>
         </div>
         <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-brand">Widgets</div>
-            <ul class="nav navbar-nav navbar-right">
+            <div class="navbar-brand wl-navLeft">Widgets</div>
+            <ul class="nav navbar-nav pull-right wl-navRight">
                 <li>
                     <a href="widget-chooser.html">
                         <span class="pull-right glyphicon glyphicon-plus"></span>
@@ -33,7 +34,8 @@
     <div class="wl widget">
         <div class="wl widget-toolbar">
             <span class="pull-right glyphicon glyphicon-align-justify"></span>
-            <span class="pull-right glyphicon glyphicon-cog"></span>
+            <a href="widget-heading.html" class="wl-blackIcon"> <span class="pull-right glyphicon glyphicon-cog"></span>
+            </a>
         </div>
         <h1>GIZMODO</h1>
 
@@ -48,7 +50,8 @@
     <div class="wl widget">
         <div class="wl widget-toolbar">
             <span class="pull-right glyphicon glyphicon-align-justify"></span>
-            <span class="pull-right glyphicon glyphicon-cog"></span>
+            <a href="widget-image.html" class="wl-blackIcon"> <span class="pull-right glyphicon glyphicon-cog"></span>
+            </a>
         </div>
         <img src="https://i.kinja-img.com/gawker-media/image/upload/fa4sce6uh8iizbkdb63y.jpg">
     </div>
@@ -62,6 +65,35 @@
             which demand user data and frequently forbid companies from ever disclosing the demands to their users.
             The two companies received NSLs from the FBI in 2011 and 2013, requiring them to secretly disclose account information. </p>
     </div>
+    <div class="wl widget">
+        <div class="wl widget-toolbar">
+            <span class="pull-right glyphicon glyphicon-align-justify"></span>
+            <span class="pull-right glyphicon glyphicon-cog"></span>
+        </div>
+        <h3>Three Great Wireless Headphones That Are Better Than Beats</h3>
+    </div>
+    <div class="wl widget">
+        <div class="wl widget-toolbar">
+            <span class="pull-right glyphicon glyphicon-align-justify"></span>
+            <a href="widget-youtube.html" class="wl-blackIcon"> <span class="pull-right glyphicon glyphicon-cog"></span>
+            </a>
+        </div>
+        <div class="wl video">
+            <iframe class="wl videoFrame"
+                    src="https://www.youtube.com/embed/mV7NxSxWlyg">
+            </iframe>
+        </div>
+    </div>
+    <div class="wl widget">
+        <div class="wl widget-toolbar">
+            <span class="pull-right glyphicon glyphicon-align-justify"></span>
+            <span class="pull-right glyphicon glyphicon-cog"></span>
+        </div>
+        <p>Wireless headphones are rapidly becoming a necessity in our dongle-tangled gadget universe,
+            but the options are endless. We set out to find a pair of high-quality, wireless on-ear headphones for
+            the discerning listener who wants to cruise the streets in style. </p>
+    </div>
+
     </div>
 </div>
 
@@ -76,15 +108,13 @@
             </span>
         </a>
         <!-- Brand and toggle get grouped for better mobile display -->
-        <ul class="nav navbar-nav navbar-right">
-            <li><a href="../website/website-new.html">
+        <ul class="nav navbar-nav pull-right wl-navRight">
+            <li><a href="../user/profile.html">
                 <span class="pull-right glyphicon glyphicon-user"></span>
             </a></li>
         </ul>
     </div><!-- /.container-fluid -->
 </nav>
-
-<body>
 
 </body>
 </html>
