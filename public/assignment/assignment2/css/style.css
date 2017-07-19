@@ -20,8 +20,13 @@ body {
     color: #f5f5f5;
 }
 
-.wl .navbar-default .navbar-nav>li>a {
+.wl .navbar-default .navbar-nav>li>a{
     color: #f5f5f5;
+}
+
+.wl .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+    color: #23527c;
+    background-color: transparent;
 }
 
 .wl-navLeft{
@@ -63,4 +68,9 @@ body {
 
 .wl .wl-blackIcon{
     color:black;
+}
+
+.wl-noUnderLine >a:focus, a:hover {
+    color: #23527c;
+    text-decoration: none;
 }
