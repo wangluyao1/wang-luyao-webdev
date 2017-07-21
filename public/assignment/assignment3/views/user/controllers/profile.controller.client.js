@@ -6,15 +6,15 @@
         .module("WebAppMaker")
         .controller("ProfileController",ProfileController)
 
-    function ProfileController($location,userService) {
+    function ProfileController($routeParams,userService) {
         var model = this;
-        var userId = $routeParams["uid"];
+        model.userId = $routeParams["uid"];
 
         model.updateUser = updateUser;
         model.unregister = unregister;
 
         function init() {
-            model.user = userService.findUserById(userId);
+            model.user = userService.findUserById(model.userId);
         }
         init();
 

@@ -7,9 +7,9 @@
         .controller("LoginController",LoginController)
 
     function LoginController($location,userService) {
-        var model = this;
+        var vm = this;
 
-        model.login = login;
+        vm.login = login;
 
         function init() {
 
@@ -18,14 +18,16 @@
 
         function login(user) {
             if(!user) {
-                model.errorMessage = "User not found";
+                vm.alert = "Unable to log in.";
+                //model.errorMessage = "User not found";
                 return;
             }
             user = userService.findUserByCredentials(user.username, user.password);
             if(user === null) {
-                model.errorMessage = "User not found";
+                //model.errorMessage = "User not found";
+                vm.alert = "Unable to log in.";
             } else {
-                $location.url("profile/"+user._id);
+                $location.url("user/"+ user._id);
             }
         }
     }

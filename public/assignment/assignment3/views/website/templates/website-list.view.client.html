@@ -36,10 +36,10 @@
         </div>
     </li>
 
-    <li class="list-group-item">
+    <li ng-repeat="website in model.websites" class="list-group-item">
         <div class="row">
             <div class="col-md-3 col-sm-3 col-xs-10"><a
-                     href="../../page/templates/page-list.view.client.html">Address Book App</a></div>
+                     href="../../page/templates/page-list.view.client.html">{{website.name}}</a></div>
             <div class="col-md-3 col-sm-4 hidden-xs"></div>
             <div class="col-sm-2 hidden-xs"></div>
             <div class="col-xs-1 col-md-4"><a href="website-edit.view.client.html"> <span class="pull-right glyphicon glyphicon-cog"></span>
@@ -47,43 +47,45 @@
             </div>
     </li>
 
-    <li class="list-group-item">
-        <div class="row">
-            <div class="col-md-3 col-sm-3 col-xs-10"><a href="../../page/templates/page-list.view.client.html">Blogger</a></div>
-            <div class="col-md-3 col-sm-4 hidden-xs"></div>
-            <div class="col-sm-2 hidden-xs"></div>
-            <div class="col-xs-1 col-md-4">
-                <a href="website-edit.view.client.html"> <span class="pull-right glyphicon glyphicon-cog"></span>
-                </a></div>
-        </div>
-    </li>
+    <!--<li class="list-group-item">-->
+        <!--<div class="row">-->
+            <!--<div class="col-md-3 col-sm-3 col-xs-10"><a href="../../page/templates/page-list.view.client.html">Blogger</a></div>-->
+            <!--<div class="col-md-3 col-sm-4 hidden-xs"></div>-->
+            <!--<div class="col-sm-2 hidden-xs"></div>-->
+            <!--<div class="col-xs-1 col-md-4">-->
+                <!--<a href="website-edit.view.client.html"> <span class="pull-right glyphicon glyphicon-cog"></span>-->
+                <!--</a></div>-->
+        <!--</div>-->
+    <!--</li>-->
 
-    <li class="list-group-item">
-    <div class="row">
-        <div class="col-md-3 col-sm-3 col-xs-10"><a href="../../page/templates/page-list.view.client.html"> Blogging App</a></div>
-        <div class="col-md-3 col-sm-4 hidden-xs"></div>
-        <div class="col-sm-2 hidden-xs"></div>
-        <div class="col-xs-1 col-md-4"><a href="website-edit.view.client.html"> <span class="pull-right glyphicon glyphicon-cog"></span>
-        </a></div></div>
-    </li>
+    <!--<li class="list-group-item">-->
+    <!--<div class="row">-->
+        <!--<div class="col-md-3 col-sm-3 col-xs-10"><a href="../../page/templates/page-list.view.client.html"> Blogging App</a></div>-->
+        <!--<div class="col-md-3 col-sm-4 hidden-xs"></div>-->
+        <!--<div class="col-sm-2 hidden-xs"></div>-->
+        <!--<div class="col-xs-1 col-md-4"><a href="website-edit.view.client.html"> <span class="pull-right glyphicon glyphicon-cog"></span>-->
+        <!--</a></div></div>-->
+    <!--</li>-->
 
-    <li class="list-group-item">
-    <div class="row">
-        <div class="col-md-3 col-sm-3 col-xs-10"><a href="../../page/templates/page-list.view.client.html">Script Testing App</a></div>
-        <div class="col-md-3 col-sm-4 hidden-xs"></div>
-        <div class="col-sm-2 hidden-xs"></div>
-        <div class="col-xs-1 col-md-4"><a href="website-edit.view.client.html"> <span class="pull-right glyphicon glyphicon-cog"></span>
-        </a></div>
-    </div>
-</li>
+    <!--<li class="list-group-item">-->
+    <!--<div class="row">-->
+        <!--<div class="col-md-3 col-sm-3 col-xs-10"><a href="../../page/templates/page-list.view.client.html">Script Testing App</a></div>-->
+        <!--<div class="col-md-3 col-sm-4 hidden-xs"></div>-->
+        <!--<div class="col-sm-2 hidden-xs"></div>-->
+        <!--<div class="col-xs-1 col-md-4"><a href="website-edit.view.client.html"> <span class="pull-right glyphicon glyphicon-cog"></span>-->
+        <!--</a></div>-->
+    <!--</div>-->
+<!--</li>-->
 </ul>
+
+    {{model.websites}}
 </div>
 
 <nav class="navbar navbar-default navbar-fixed-bottom">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <ul class="nav navbar-nav pull-right wl-navRight">
-            <li><a href="../../user/templates/profile.view.client.html">
+            <li><a href="/user/{{model.user._id}}">
                 <span class="pull-right glyphicon glyphicon-user"></span>
             </a></li>
         </ul>

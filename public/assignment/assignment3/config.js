@@ -68,9 +68,5 @@
                 controller: "",
                 controllerAs:"model"
             })
-
-
-
-
     }
 })();

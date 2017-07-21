@@ -1,14 +1,11 @@
-<div ng-controller="ProfileController">
-
 <div class="wl wl-profile">
-
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
-        <a class="navbar-brand wl-navLeft" href="#">Profile</a>
+        <div class="navbar-brand wl-navLeft">Profile</div>
             <ul class="nav navbar-nav pull-right wl-navRight">
                 <li>
-                    <a href="#!/user/{{model.user.uid}}"><span class="pull-right glyphicon glyphicon-ok"></span> </a>
+                    <a href="#!/user/{{model.user._id}}"><span class="pull-right glyphicon glyphicon-ok"></span> </a>
                 </li>
             </ul>
     </div><!-- /.container-fluid -->
@@ -49,7 +46,7 @@
         value="Annunziato"/>
 
         <a class="btn btn-primary btn-block"
-           href="../../website/templates/website-list.view.client.html"
+           href="#!/user/{{model.user._id}}/website"
            role="button">Websites</a>
         <a class="btn btn-danger btn-block"
            href="#!/login"
@@ -60,12 +57,10 @@
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <ul class="nav navbar-nav pull-right wl-navRight">
-                <li><a href="#!/user/{{model.user.uid}}">
+                <li><a href="#!/user/{{model.user._id}}">
                     <span class="pull-right glyphicon glyphicon-user"></span>
                 </a></li>
             </ul>
         </div><!-- /.container-fluid -->
     </nav>
-
-</div>
 </div>

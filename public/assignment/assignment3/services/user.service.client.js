@@ -26,7 +26,7 @@
         return api;
 
         function createUser(user) {
-            userData.add({_id:user.id ,username:user.username,password:user.password,firstName:user.firstName,lastName:user.lastName});
+            userData.push(user);
         }
 
         function findUserById(userId) {
@@ -61,14 +61,18 @@
 
         function updateUser(userId,user) {
             var _user = findUserById(userId);
-            var index = userData.indexOf(_user);
-            userData[index] = user;
+            if(_user != null) {
+                var index = userData.indexOf(_user);
+                userData[index] = user;
+            }
         }
 
         function deleteUser(userId) {
             var _user = findUserById(userId);
-            var index = userData.indexOf(_user);
-            userData.splice(index,index+1);
+            if(_user != null) {
+                var index = userData.indexOf(_user);
+                userData.splice(index, index + 1);
+            }
         }
 
     }
