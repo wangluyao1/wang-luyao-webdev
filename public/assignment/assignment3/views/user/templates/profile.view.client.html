@@ -1,0 +1,67 @@
+<div ng-controller="ProfileController">
+
+<div class="wl wl-profile">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <a class="navbar-brand wl-navLeft" href="#">Profile</a>
+            <ul class="nav navbar-nav pull-right wl-navRight">
+                <li>
+                    <a href="profile.view.client.html"><span class="pull-right glyphicon glyphicon-ok"></span> </a>
+                </li>
+            </ul>
+    </div><!-- /.container-fluid -->
+</nav>
+
+    <div class="container-fluid">
+        <label for="username">Username</label>
+        <input name="username"
+                type="text"
+               id="username"
+               class="form-control"
+               placeholder="username"
+               value= "jannunzi"/>
+        <label for="email">Email</label>
+        <input name="email"
+                type="email"
+               id = "email"
+               class="form-control"
+               placeholder="alice@wonderland.com"
+               value="jannunzi@gmail.com">
+        <label for="firstName">First Name</label>
+        <input name="firstName"
+                type="text"
+                id="firstName"
+                class="form-control"
+                placeholder="firstname"
+        value="Jose"/>
+        <label for="lastName">Last Name</label>
+        <input name = "lastName"
+                type="text"
+               id="lastName"
+               class="form-control"
+               placeholder="lastName"
+        value="Annunziato"/>
+
+        <a class="btn btn-primary btn-block"
+           href="../../website/templates/website-list.view.client.html"
+           role="button">Websites</a>
+        <a class="btn btn-danger btn-block"
+           href="login.view.client.html"
+           role="button">Logout</a>
+    </div>
+
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <ul class="nav navbar-nav pull-right wl-navRight">
+                <li><a href="../../website/templates/website-new.view.client.html">
+                    <span class="pull-right glyphicon glyphicon-user"></span>
+                </a></li>
+            </ul>
+        </div><!-- /.container-fluid -->
+    </nav>
+
+</div>
+</div>
