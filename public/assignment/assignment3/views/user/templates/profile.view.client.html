@@ -8,7 +8,7 @@
         <a class="navbar-brand wl-navLeft" href="#">Profile</a>
             <ul class="nav navbar-nav pull-right wl-navRight">
                 <li>
-                    <a href="profile.view.client.html"><span class="pull-right glyphicon glyphicon-ok"></span> </a>
+                    <a href="#!/user/{{model.user.uid}}"><span class="pull-right glyphicon glyphicon-ok"></span> </a>
                 </li>
             </ul>
     </div><!-- /.container-fluid -->
@@ -17,6 +17,7 @@
     <div class="container-fluid">
         <label for="username">Username</label>
         <input name="username"
+               ng-model= "model.user.username"
                 type="text"
                id="username"
                class="form-control"
@@ -24,6 +25,7 @@
                value= "jannunzi"/>
         <label for="email">Email</label>
         <input name="email"
+               ng-model="model.user.email"
                 type="email"
                id = "email"
                class="form-control"
@@ -31,6 +33,7 @@
                value="jannunzi@gmail.com">
         <label for="firstName">First Name</label>
         <input name="firstName"
+               ng-model="model.user.firstName"
                 type="text"
                 id="firstName"
                 class="form-control"
@@ -38,6 +41,7 @@
         value="Jose"/>
         <label for="lastName">Last Name</label>
         <input name = "lastName"
+               ng-model="model.user.lastName"
                 type="text"
                id="lastName"
                class="form-control"
@@ -48,7 +52,7 @@
            href="../../website/templates/website-list.view.client.html"
            role="button">Websites</a>
         <a class="btn btn-danger btn-block"
-           href="login.view.client.html"
+           href="#!/login"
            role="button">Logout</a>
     </div>
 
@@ -56,7 +60,7 @@
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <ul class="nav navbar-nav pull-right wl-navRight">
-                <li><a href="../../website/templates/website-new.view.client.html">
+                <li><a href="#!/user/{{model.user.uid}}">
                     <span class="pull-right glyphicon glyphicon-user"></span>
                 </a></li>
             </ul>

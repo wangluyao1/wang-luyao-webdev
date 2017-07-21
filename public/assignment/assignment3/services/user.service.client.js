@@ -16,18 +16,60 @@
         ]
 
     var api ={
-        "findUserByCredentials": findUserByCredentials
-    }
+            "createUser":createUser,
+            "findUserById": findUserById,
+            "findUserByUserName": findUserByUserName,
+            "findUserByCredentials": findUserByCredentials,
+            "updateUser": updateUser,
+            "deleteUser": deleteUser,
+    };
+        return api;
 
-    function findUserByCredentials(username, password) {
-        for(var u in userData) {
-            var _user = userData[u];
-            if(_user.username === username && _user.password === password) {
-                return _user;
-            }
+        function createUser(user) {
+            userData.add({_id:user.id ,username:user.username,password:user.password,firstName:user.firstName,lastName:user.lastName});
         }
-        return null;
-    }
+
+        function findUserById(userId) {
+            for(var u in userData) {
+                var _user = userData[u];
+                if(_user._id === userId) {
+                    return _user;
+                }
+            }
+            return null;
+        }
+
+        function findUserByUserName(username) {
+            for(var u in userData) {
+                var _user = userData[u];
+                if(_user.username === username) {
+                    return _user;
+                }
+            }
+            return null;
+        }
+
+        function findUserByCredentials(username, password) {
+            for(var u in userData) {
+                var _user = userData[u];
+                if(_user.username === username && _user.password === password) {
+                    return _user;
+                }
+            }
+            return null;
+        }
+
+        function updateUser(userId,user) {
+            var _user = findUserById(userId);
+            var index = userData.indexOf(_user);
+            userData[index] = user;
+        }
+
+        function deleteUser(userId) {
+            var _user = findUserById(userId);
+            var index = userData.indexOf(_user);
+            userData.splice(index,index+1);
+        }
 
     }
 
