@@ -71,7 +71,7 @@
             var _user = findUserById(userId);
             if(_user != null) {
                 var index = userData.indexOf(_user);
-                userData.splice(index, index + 1);
+                userData.splice(index, 1);
             }
         }
 

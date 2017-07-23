@@ -12,7 +12,7 @@
             href="website-list.html">Websites</div>
             <ul class="nav navbar-nav pull-right wl-navRight">
                 <li>
-                    <a href="website-new.view.client.html">
+                    <a href="#!/user/{{model.userId}}/website/new">
                         <span class="pull-right glyphicon glyphicon-plus"></span>
                     </a>
                 </li>
@@ -29,7 +29,7 @@
             <div class="col-md-3 col-sm-4 hidden-xs">Updated</div>
             <div class="col-sm-2 hidden-xs">Visits</div>
             <div class="col-xs-2 col-md-4 wl">
-                <a href="website-new.view.client.html">
+                <a href="#!/user/{{model.userId}}/website/new">
                     <span class="pull-right glyphicon glyphicon-plus"></span>
                 </a>
             </div>
@@ -39,14 +39,13 @@
     <li ng-repeat="website in model.websites" class="list-group-item">
         <div class="row">
             <div class="col-md-3 col-sm-3 col-xs-10"><a
-                     href="../../page/templates/page-list.view.client.html">{{website.name}}</a></div>
+                     href="#!/user/{{model.userId}}/website/{{website._id}}/page">{{website.name}}</a></div>
             <div class="col-md-3 col-sm-4 hidden-xs"></div>
             <div class="col-sm-2 hidden-xs"></div>
-            <div class="col-xs-1 col-md-4"><a href="website-edit.view.client.html"> <span class="pull-right glyphicon glyphicon-cog"></span>
+            <div class="col-xs-1 col-md-4"><a href="#!/user/{{model.userId}}/website/{{website._id}}"> <span class="pull-right glyphicon glyphicon-cog"></span>
             </a></div>
             </div>
     </li>
-
     <!--<li class="list-group-item">-->
         <!--<div class="row">-->
             <!--<div class="col-md-3 col-sm-3 col-xs-10"><a href="../../page/templates/page-list.view.client.html">Blogger</a></div>-->
@@ -85,7 +84,8 @@
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <ul class="nav navbar-nav pull-right wl-navRight">
-            <li><a href="/user/{{model.user._id}}">
+            <li>
+                <a role="button" href="#!/user/{{model.userId}}">
                 <span class="pull-right glyphicon glyphicon-user"></span>
             </a></li>
         </ul>

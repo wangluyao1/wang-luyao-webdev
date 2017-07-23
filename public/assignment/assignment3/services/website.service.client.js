@@ -27,7 +27,7 @@
         return api;
 
         function createWebsite(website) {
-            websiteData.add(website);
+            websiteData.push(website);
         }
 
         function findWebsitesByUser(userId) {
@@ -35,7 +35,7 @@
             for(var u in websiteData){
                 var website = websiteData[u];
                 if(website.developerId === userId){
-                    websites.add(website);
+                    websites.push(website);
                 }
             }
             return websites;
@@ -44,7 +44,7 @@
         function findWebsiteById(websiteId) {
             for(var u in websiteData){
                 var website = websiteData[u];
-                if(website._id === userId){
+                if(website._id === websiteId){
                     return website;
                 }
             }
@@ -61,9 +61,10 @@
 
         function deleteWebsite(websiteId) {
             var _website = findWebsiteById(websiteId);
+            console.log(_website);
             if(_website != null) {
                 var index = websiteData.indexOf(_website);
-                websiteData.splice(index, index + 1);
+                websiteData.splice(index,1);
             }
         }
     }

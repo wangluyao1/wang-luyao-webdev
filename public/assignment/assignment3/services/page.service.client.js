@@ -24,7 +24,7 @@
 
         function createPage(websiteId,page) {
             page.websiteId = websiteId;
-            pageData.add(page);
+            pageData.push(page);
         }
         
         function findPageByWebsiteId(websiteId) {
@@ -32,7 +32,7 @@
             for(var u in pageData){
                 var page = pageData[u];
                 if(page.websiteId === websiteId){
-                    page.add(page);
+                    page.push(page);
                 }
             }
             return pages;
@@ -60,7 +60,7 @@
             var _page = findPageById(pageId);
             if(_page != null) {
                 var index = pageData.indexOf(_page);
-                pageData.splice(index,index+1);
+                pageData.splice(index,1);
             }
         }
     }
