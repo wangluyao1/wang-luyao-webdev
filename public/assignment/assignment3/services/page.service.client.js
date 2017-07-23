@@ -32,7 +32,7 @@
             for(var u in pageData){
                 var page = pageData[u];
                 if(page.websiteId === websiteId){
-                    page.push(page);
+                    pages.push(page);
                 }
             }
             return pages;

@@ -1,7 +1,8 @@
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
         <div class="wl">
-        <a href="../../website/templates/website-list.view.client.html"
+        <a href="#!/user/{{model.userId}}/website"
+           role="button"
            class="navbar-brand wl-navLeft">
             <span class="pull-left glyphicon glyphicon-chevron-left"></span>
         </a>
@@ -10,7 +11,7 @@
             <div class="navbar-brand wl-navLeft">Pages</div>
             <ul class="nav navbar-nav pull-right wl-navRight">
                 <li>
-                    <a href="page-new.view.client.html">
+                    <a href="#!/user/{{model.userId}}/website/{{model.websiteId}}/page/new">
                         <span class="pull-right glyphicon glyphicon-plus"></span>
                     </a>
                 </li>
@@ -27,61 +28,26 @@
             <div class="col-md-3 col-sm-4 hidden-xs">Updated</div>
             <div class="col-sm-2 hidden-xs">Visits</div>
             <div class="col-xs-2 col-md-4 wl">
-                <a href="page-new.view.client.html">
+                <a href="#!/user/{{model.userId}}/website/{{model.websiteId}}/page/new">
                     <span class="pull-right glyphicon glyphicon-plus"></span>
                 </a>
             </div>
         </div>
     </li>
 
-    <li class="list-group-item">
+    <li ng-repeat="page in model.pages" class="list-group-item">
         <div class="row">
-            <div class="col-md-3 col-sm-3 col-xs-10"><a href="../../widget/templates/widget-list.view.client.html">Blog Post</a></div>
+            <div class="col-md-3 col-sm-3 col-xs-10">
+                <a href="#!/user/{{model.userId}}/website/{{model.websiteId}}/page/{{page._id}}/widget">{{page.name}}</a></div>
             <div class="col-md-3 col-sm-4 hidden-xs"></div>
             <div class="col-sm-2 hidden-xs"></div>
             <div class="col-xs-1 col-md-4">
-                <a href="page-edit.view.client.html"> <span class="pull-right glyphicon glyphicon-cog"></span>
+                <a href="#!/user/{{model.userId}}/website/{{model.websiteId}}/page/{{page._id}}">
+                    <span class="pull-right glyphicon glyphicon-cog"></span>
                 </a></div>
             </div>
     </li>
 
-    <li class="list-group-item">
-        <div class="row">
-            <div class="col-md-3 col-sm-3 col-xs-10"><a href="../../widget/templates/widget-list.view.client.html">Blogs</a></div>
-            <div class="col-md-3 col-sm-4 hidden-xs"></div>
-            <div class="col-sm-2 hidden-xs"></div>
-            <div class="col-xs-1 col-md-4"><a href="page-edit.view.client.html"> <span class="pull-right glyphicon glyphicon-cog"></span>
-            </a></div></div>
-    </li>
-
-    <li class="list-group-item">
-    <div class="row">
-        <div class="col-md-3 col-sm-3 col-xs-10"><a href="../../widget/templates/widget-list.view.client.html">Home</a></div>
-        <div class="col-md-3 col-sm-4 hidden-xs"></div>
-        <div class="col-sm-2 hidden-xs"></div>
-        <div class="col-xs-1 col-md-4"><a href="page-edit.view.client.html"> <span class="pull-right glyphicon glyphicon-cog"></span>
-        </a></div></div>
-    </li>
-
-    <li class="list-group-item">
-    <div class="row">
-        <div class="col-md-3 col-sm-3 col-xs-10"><a href="../../widget/templates/widget-list.view.client.html">Home</a></div>
-        <div class="col-md-3 col-sm-4 hidden-xs"></div>
-        <div class="col-sm-2 hidden-xs"></div>
-        <div class="col-xs-1 col-md-4"><a href="page-edit.view.client.html"> <span class="pull-right glyphicon glyphicon-cog"></span>
-        </a></div>
-    </div>
-</li>
-
-    <li class="list-group-item">
-        <div class="row">
-            <div class="col-md-3 col-sm-3 col-xs-10"><a href="../../widget/templates/widget-list.view.client.html">Contact us</a></div>
-            <div class="col-md-3 col-sm-4 hidden-xs"></div>
-            <div class="col-sm-2 hidden-xs"></div>
-            <div class="col-xs-1 col-md-4"><a href="page-edit.view.client.html"> <span class="pull-right glyphicon glyphicon-cog"></span>
-            </a></div>
-        </div>
-    </li>
 </ul>
 </div>
 
