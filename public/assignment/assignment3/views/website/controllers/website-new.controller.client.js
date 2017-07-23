@@ -18,7 +18,7 @@
         
         function websiteNew(newWebsite) {
             newWebsite.developerId = model.userId;
-            newWebsite._id = new Date().getTime();
+            newWebsite._id = (new Date().getTime()).toString();
             websiteService.createWebsite(newWebsite);
             $location.url("user/"+ model.userId+"/website");
         }

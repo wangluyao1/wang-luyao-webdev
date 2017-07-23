@@ -8,6 +8,16 @@
 
     function config($routeProvider) {
         $routeProvider
+            .when("",{
+                templateUrl:"views/user/templates/login.view.client.html",
+                controller: "LoginController",
+                controllerAs:"model"
+            })
+            .when("/",{
+                templateUrl:"views/user/templates/login.view.client.html",
+                controller: "LoginController",
+                controllerAs:"model"
+            })
             .when("/login",{
                 templateUrl:"views/user/templates/login.view.client.html",
                 controller: "LoginController",
@@ -45,12 +55,12 @@
             })
             .when("/user/:uid/website/:wid/page/new",{
                 templateUrl:"views/page/templates/page-new.view.client.html",
-                controller: "",
+                controller: "PageNewController",
                 controllerAs:"model"
             })
             .when("/user/:uid/website/:wid/page/:pid",{
                 templateUrl:"views/page/templates/page-edit.view.client.html",
-                controller: "",
+                controller: "PageEditController",
                 controllerAs:"model"
             })
             .when("/user/:uid/website/:wid/page/:pid/widget",{
