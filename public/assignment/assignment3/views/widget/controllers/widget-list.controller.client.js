@@ -20,7 +20,7 @@
         init();
 
         function transferUrl(url) {
-            var splitArray = url.split("/");
+            var splitArray = url.toString().split("/");
             var videoId = splitArray[splitArray.length-1];
             var embedUrlPrefix = "https://www.youtube.com/embed/";
             var embedUrl = embedUrlPrefix + videoId;

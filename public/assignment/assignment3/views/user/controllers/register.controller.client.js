@@ -21,7 +21,7 @@
                 model.alert = "Password should be the same.";
             } else {
                 var date = new Date();
-                user._id = date.getTime();
+                user._id = (date.getTime()).toString();
                 userService.createUser(user);
                 $location.url("user/"+ user._id);
             }

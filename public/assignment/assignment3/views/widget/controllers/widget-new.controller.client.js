@@ -12,13 +12,9 @@
         model.websiteId = $routeParams.wid;
         model.pageId = $routeParams.pid;
 
-        model.widgetNew = widgetNew;
-        var typeHeading = "HEADING";
-        var typeImage = "IMAGE";
-        var typeYoutube = "YOUTUBE";
-        model.widgetNewHeading = widgetNew(typeHeading);
-        model.widgetNewImage = widgetNew(typeImage);
-        model.widgetNewYoutube = widgetNew(typeYoutube);
+        model.widgetNewHeading = widgetNewHeading;
+        model.widgetNewImage = widgetNewImage;
+        model.widgetNewYoutube = widgetNewYoutube;
 
         function init() {
         }
@@ -29,7 +25,22 @@
             newWidget._id = (new Date().getTime()).toString();
             widgetService.createWidget(model.pageId,newWidget);
             $location.url("user/"+ model.userId+"/website/"
-                + model.websiteId+"/page/"+model.pageId+"/widget/"+ newWidget._id);
+               + model.websiteId+"/page/"+model.pageId+"/widget/"+ newWidget._id);
+        }
+
+        function widgetNewHeading() {
+            var typeHeading = "HEADING";
+            widgetNew(typeHeading);
+        }
+
+        function widgetNewImage() {
+            var typeImage = "IMAGE";
+            widgetNew(typeImage);
+        }
+
+        function widgetNewYoutube() {
+            var typeYoutube = "YOUTUBE";
+            widgetNew(typeYoutube);
         }
     }
 })();
