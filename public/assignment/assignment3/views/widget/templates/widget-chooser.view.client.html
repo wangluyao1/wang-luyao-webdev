@@ -1,7 +1,8 @@
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
         <div class="wl">
-        <a href="widget-list.view.client.html"
+        <a href="#!/user/{{model.userId}}/website/{{model.websiteId}}/page/{{model.pageId}}/widget"
+           role="button"
            class="navbar-brand wl-navLeft">
             <span class="pull-left glyphicon glyphicon-chevron-left"></span>
         </a>
@@ -14,34 +15,37 @@
 <div class="container-fluid">
     <ul class="list-group">
         <ul class="list-group-item">
-            <a href="widget-heading.view.client.html">Header</a>
+            <a ng-click= "model.widgetNewHeader"
+               role="button">Header</a>
         </ul>
         <ul class="list-group-item">
-            <a href="">Label</a>
+            <div>Label</div>
         </ul>
         <ul class="list-group-item">
-            <a href="">HTML</a>
+            <div>HTML</div>
         </ul>
         <ul class="list-group-item">
-            <a href="">Text Input</a>
+            <div>Text Input</div>
         </ul>
         <ul class="list-group-item">
-            <a href="">Link</a>
+            <div>Link</div>
         </ul>
         <ul class="list-group-item">
-            <a href="">Button</a>
+            <div>Button</div>
         </ul>
         <ul class="list-group-item">
-            <a href="widget-image.view.client.html">Image</a>
+            <a ng-click="model.widgetNewImage"
+               role="button">Image</a>
         </ul>
         <ul class="list-group-item">
-            <a href="widget-youtube.view.client.html">YouTube</a>
+            <a ng-click="model.widgetNewYoutube"
+               role="button">YouTube</a>
         </ul>
         <ul class="list-group-item">
-            <a href="">Data Table</a>
+            <div>Data Table</div>
         </ul>
         <ul class="list-group-item">
-            <a href="">Repeater</a>
+            <div>Repeater</div>
         </ul>
 
     </ul>
@@ -51,7 +55,7 @@
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <ul class="nav navbar-nav pull-right wl-navRight">
-            <li><a href="../../website/templates/website-new.view.client.html">
+            <li><a href="#!/user/{{model.userId}}">
                 <span class="pull-right glyphicon glyphicon-user"></span>
             </a></li>
         </ul>
