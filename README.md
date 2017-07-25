@@ -10,6 +10,9 @@ https://wang-luyao-webdev.herokuapp.com/
 https://wang-luyao-webdev.herokuapp.com/project/index.html
 
 <h2>Link to assignments:</h2>
-Assignment 2: https://wang-luyao-webdev.herokuapp.com/assignment/assignment2/
-Assignment 3: https://wang-luyao-webdev.herokuapp.com/assignment/assignment3/
+Assignment 2:
+https://wang-luyao-webdev.herokuapp.com/assignment/assignment2/
+
+Assignment 3:
+https://wang-luyao-webdev.herokuapp.com/assignment/assignment3/
 
