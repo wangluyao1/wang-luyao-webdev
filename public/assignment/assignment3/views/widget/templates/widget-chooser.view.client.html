@@ -1,21 +1,21 @@
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
         <div class="wl">
-        <a href="#!/user/{{model.userId}}/website/{{model.websiteId}}/page/{{model.pageId}}/widget"
-           role="button"
-           class="navbar-brand wl-navLeft">
-            <span class="pull-left glyphicon glyphicon-chevron-left"></span>
-        </a>
+            <a href="#!/user/{{model.userId}}/website/{{model.websiteId}}/page/{{model.pageId}}/widget"
+               role="button"
+               class="navbar-brand wl-navLeft">
+                <span class="pull-left glyphicon glyphicon-chevron-left"></span>
+            </a>
         </div>
         <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-brand wl-navLeft">Widgets</div>
+        <div class="navbar-brand wl-navLeft">Widgets</div>
     </div><!-- /.container-fluid -->
 </nav>
 
 <div class="container-fluid">
     <ul class="list-group">
         <ul class="list-group-item">
-            <a ng-click= "model.widgetNewHeading()"
+            <a ng-click="model.widgetNewHeading()"
                role="button">Header</a>
         </ul>
         <ul class="list-group-item">

@@ -8,20 +8,20 @@
 
     function config($routeProvider) {
         $routeProvider
-            .when("/login",{
-                templateUrl:"views/user/templates/login.view.client.html",
+            .when("/login", {
+                templateUrl: "views/user/templates/login.view.client.html",
                 controller: "LoginController",
-                controllerAs:"model"
+                controllerAs: "model"
             })
-            .when("/register",{
-                templateUrl:"views/user/templates/register.view.client.html",
+            .when("/register", {
+                templateUrl: "views/user/templates/register.view.client.html",
                 controller: "RegisterController",
-                controllerAs:"model"
+                controllerAs: "model"
             })
-            .when("/user/:uid",{
-                templateUrl:"views/user/templates/profile.view.client.html",
+            .when("/user/:uid", {
+                templateUrl: "views/user/templates/profile.view.client.html",
                 controller: "ProfileController",
-                controllerAs:"model"
+                controllerAs: "model"
             })
     }
 })();

@@ -1,51 +1,51 @@
 <div class="wl wl-profile">
-<nav class="navbar navbar-custom navbar-fixed-top">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-brand wl-navLeft">Profile</div>
+    <nav class="navbar navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-brand wl-navLeft">Profile</div>
             <ul class="nav navbar-nav pull-right wl-navRight">
                 <li>
-                    <a role ="button"
+                    <a role="button"
                        ng-click="model.updateUser(model.user)">
                         <span class="pull-right glyphicon glyphicon-ok"></span> </a>
                 </li>
             </ul>
-    </div><!-- /.container-fluid -->
-</nav>
+        </div><!-- /.container-fluid -->
+    </nav>
 
     <div class="container-fluid">
         <label for="username">Username</label>
         <input name="username"
-               ng-model= "model.user.username"
-                type="text"
+               ng-model="model.user.username"
+               type="text"
                id="username"
                class="form-control"
                placeholder="username"
-               value= "jannunzi"/>
+               value="jannunzi"/>
         <label for="email">Email</label>
         <input name="email"
                ng-model="model.user.email"
-                type="email"
-               id = "email"
+               type="email"
+               id="email"
                class="form-control"
                placeholder="alice@wonderland.com"
                value="jannunzi@gmail.com">
         <label for="firstName">First Name</label>
         <input name="firstName"
                ng-model="model.user.firstName"
-                type="text"
-                id="firstName"
-                class="form-control"
-                placeholder="firstname"
-        value="Jose"/>
+               type="text"
+               id="firstName"
+               class="form-control"
+               placeholder="firstname"
+               value="Jose"/>
         <label for="lastName">Last Name</label>
-        <input name = "lastName"
+        <input name="lastName"
                ng-model="model.user.lastName"
-                type="text"
+               type="text"
                id="lastName"
                class="form-control"
                placeholder="lastName"
-        value="Annunziato"/>
+               value="Annunziato"/>
 
         <a class="btn btn-primary btn-block"
            href="#!/user/{{model.user._id}}/website"

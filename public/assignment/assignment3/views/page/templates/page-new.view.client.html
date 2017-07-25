@@ -1,121 +1,121 @@
- <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-xs-3 visible-lg">
-            <!--<div class="wl">-->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-3 visible-lg">
+                <!--<div class="wl">-->
                 <a href="#!/user/{{model.userId}}/website/{{model.websiteId}}/page"
                    role="button"
                    class="navbar-brand">
                     <span class="pull-left glyphicon glyphicon-chevron-left"></span>
                 </a>
-            <!--</div>-->
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-brand">Pages</div>
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a href="#!/user/{{model.userId}}/website/{{model.websiteId}}/page/new">
-                        <span class="pull-right glyphicon glyphicon-plus"></span>
-                    </a>
+                <!--</div>-->
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-brand">Pages</div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#!/user/{{model.userId}}/website/{{model.websiteId}}/page/new">
+                            <span class="pull-right glyphicon glyphicon-plus"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-9 visible-lg">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-brand">New Page</div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a ng-click="model.pageNew(model.newPage)"
+                           role="button"
+                        >
+                            <span class="pull-right glyphicon glyphicon-ok"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-xs-12 hidden-lg">
+                <nav class="navbar navbar-default navbar-fixed-top">
+                    <div class="container-fluid">
+                        <div class="wl">
+                            <a href="#!/user/{{model.userId}}/website/{{model.websiteId}}/page"
+                               class="navbar-brand wl-navLeft">
+                                <span class="pull-left glyphicon glyphicon-chevron-left"></span>
+                            </a>
+                        </div>
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-brand wl-navLeft">New Page</div>
+                        <ul class="nav navbar-nav pull-right wl-navRight">
+                            <li>
+                                <a ng-click="model.pageNew(model.newPage)"
+                                   role="button">
+                                    <span class="pull-right glyphicon glyphicon-ok"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-xs-3 visible-lg">
+            <ul class="list-group">
+                <li class="list-group-item active">
+                    <div class="row">
+                        <div class="col-xs-10">Name</div>
+                        <div class="col-xs-2">
+                            <a href="website-new.html">
+                                <span class="pull-right glyphicon glyphicon-plus"></span>
+                            </a>
+                        </div>
+                    </div>
                 </li>
+
+                <li ng-repeat="page in model.pages" class="list-group-item">
+                    <div class="row">
+                        <div class="col-xs-10">{{page.name}}</div>
+                        <div class="col-xs-2">
+                            <a role="button"
+                               href="#!/user/{{model.userId}}/website/{{model.websiteId}}/page/{{page._id}}">
+                                <span class="pull-right glyphicon glyphicon-cog"></span>
+                            </a></div>
+                    </div>
+                </li>
+
             </ul>
         </div>
-                <div class="col-lg-9 visible-lg">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-brand">New Page</div>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a ng-click="model.pageNew(model.newPage)"
-                               role="button"
-                               >
-                                <span class="pull-right glyphicon glyphicon-ok"></span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-xs-12 hidden-lg">
-                    <nav class="navbar navbar-default navbar-fixed-top">
-                        <div class="container-fluid">
-                            <div class="wl">
-                                <a href="#!/user/{{model.userId}}/website/{{model.websiteId}}/page"
-                                   class="navbar-brand wl-navLeft">
-                                    <span class="pull-left glyphicon glyphicon-chevron-left"></span>
-                                </a>
-                            </div>
-                            <!-- Brand and toggle get grouped for better mobile display -->
-                            <div class="navbar-brand wl-navLeft">New Page</div>
-                            <ul class="nav navbar-nav pull-right wl-navRight">
-                                <li>
-                                    <a ng-click="model.pageNew(model.newPage)"
-                                       role="button">
-                                        <span class="pull-right glyphicon glyphicon-ok"></span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
-            </div>
+
+
+        <div class="col-xs-12 col-lg-9">
+            <label for="name">Name</label>
+            <input name="name"
+                   ng-model="model.newPage.name"
+                   type="text"
+                   id="name"
+                   class="form-control"
+                   placeholder="Page Name"/>
+            <label for="title">Title</label>
+            <input name="title"
+                   ng-model="model.newPage.title"
+                   type="text"
+                   id="title"
+                   class="form-control"
+                   placeholder="Page Title"></input>
         </div>
-    </nav>
-
-    <div class="container-fluid">
-
-        <div class="row">
-            <div class="col-xs-3 visible-lg">
-                <ul class="list-group">
-                    <li class="list-group-item active">
-                        <div class="row">
-                            <div class="col-xs-10">Name</div>
-                            <div class="col-xs-2">
-                                <a href="website-new.html">
-                                    <span class="pull-right glyphicon glyphicon-plus"></span>
-                                </a>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li ng-repeat="page in model.pages" class="list-group-item">
-                        <div class="row">
-                            <div class="col-xs-10">{{page.name}}</div>
-                            <div class="col-xs-2">
-                                <a role="button"
-                                   href="#!/user/{{model.userId}}/website/{{model.websiteId}}/page/{{page._id}}">
-                                <span class="pull-right glyphicon glyphicon-cog"></span>
-                                </a></div>
-                        </div>
-                    </li>
-
-                </ul>
-                </div>
-
-
-                <div class="col-xs-12 col-lg-9">
-                <label for="name">Name</label>
-                <input name="name"
-                       ng-model="model.newPage.name"
-                        type="text"
-                       id="name"
-                       class="form-control"
-                       placeholder="Page Name"/>
-                <label for="title">Title</label>
-                <input name="title"
-                       ng-model="model.newPage.title"
-                        type="text"
-                          id="title"
-                          class="form-control"
-                          placeholder="Page Title"></input>
-            </div>
-        </div>
-
     </div>
 
-    <nav class="navbar navbar-default navbar-fixed-bottom">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <ul class="nav navbar-nav pull-right wl-navRight">
-                <li><a href="../../user/templates/profile.view.client.html">
-                    <span class="pull-right glyphicon glyphicon-user"></span>
-                </a></li>
-            </ul>
-        </div>
-    </nav>
+</div>
+
+<nav class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <ul class="nav navbar-nav pull-right wl-navRight">
+            <li><a href="#!/user/{{model.userId}}">
+                <span class="pull-right glyphicon glyphicon-user"></span>
+            </a></li>
+        </ul>
+    </div>
+</nav>

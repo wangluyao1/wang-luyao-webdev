@@ -4,9 +4,9 @@
 (function () {
     angular
         .module("WebAppMaker")
-        .controller("WidgetNewController",WidgetNewController)
+        .controller("WidgetNewController", WidgetNewController)
 
-    function WidgetNewController($location,$routeParams,widgetService) {
+    function WidgetNewController($location, $routeParams, widgetService) {
         var model = this;
         model.userId = $routeParams.uid;
         model.websiteId = $routeParams.wid;
@@ -18,14 +18,15 @@
 
         function init() {
         }
+
         init();
 
         function widgetNew(type) {
-            var newWidget ={widgetType:type};
+            var newWidget = {widgetType: type};
             newWidget._id = (new Date().getTime()).toString();
-            widgetService.createWidget(model.pageId,newWidget);
-            $location.url("user/"+ model.userId+"/website/"
-               + model.websiteId+"/page/"+model.pageId+"/widget/"+ newWidget._id);
+            widgetService.createWidget(model.pageId, newWidget);
+            $location.url("user/" + model.userId + "/website/"
+                + model.websiteId + "/page/" + model.pageId + "/widget/" + newWidget._id);
         }
 
         function widgetNewHeading() {

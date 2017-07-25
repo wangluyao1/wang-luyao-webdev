@@ -4,9 +4,9 @@
 (function () {
     angular
         .module("WebAppMaker")
-        .controller("ProfileController",ProfileController)
+        .controller("ProfileController", ProfileController)
 
-    function ProfileController($routeParams,userService) {
+    function ProfileController($routeParams, userService) {
         var model = this;
         model.userId = $routeParams["uid"];
 
@@ -16,10 +16,11 @@
         function init() {
             model.user = userService.findUserById(model.userId);
         }
+
         init();
 
         function updateUser(user) {
-            userService.updateUser(user._id,user);
+            userService.updateUser(user._id, user);
         }
 
         function unregister(user) {

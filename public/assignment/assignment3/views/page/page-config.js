@@ -8,20 +8,20 @@
 
     function config($routeProvider) {
         $routeProvider
-            .when("/user/:uid/website/:wid/page",{
-                templateUrl:"views/page/templates/page-list.view.client.html",
+            .when("/user/:uid/website/:wid/page", {
+                templateUrl: "views/page/templates/page-list.view.client.html",
                 controller: "PageListController",
-                controllerAs:"model"
+                controllerAs: "model"
             })
-            .when("/user/:uid/website/:wid/page/new",{
-                templateUrl:"views/page/templates/page-new.view.client.html",
+            .when("/user/:uid/website/:wid/page/new", {
+                templateUrl: "views/page/templates/page-new.view.client.html",
                 controller: "PageNewController",
-                controllerAs:"model"
+                controllerAs: "model"
             })
-            .when("/user/:uid/website/:wid/page/:pid",{
-                templateUrl:"views/page/templates/page-edit.view.client.html",
+            .when("/user/:uid/website/:wid/page/:pid", {
+                templateUrl: "views/page/templates/page-edit.view.client.html",
                 controller: "PageEditController",
-                controllerAs:"model"
+                controllerAs: "model"
             })
     }
 })();
