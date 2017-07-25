@@ -1,6 +1,6 @@
-<div class="wl wl-website-edit">
+<div class="wl wl-website-new">
 
-    <nav class="navbar navbar-custom navbar-fixed-top">
+    <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xs-4 hidden-xs">
@@ -16,7 +16,7 @@
             <ul class="nav navbar-nav navbar-right">
                 <li>
                     <a href="#!/user/{{model.userId}}/website/new"
-                       role="button">
+                    role="button">
                         <span class="pull-right glyphicon glyphicon-plus"></span>
                     </a>
                 </li>
@@ -24,38 +24,34 @@
         </div>
                 <div class="col-lg-8 hidden-xs">
                     <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-brand">Edit Website</div>
+                    <div class="navbar-brand">New Website</div>
                     <ul class="nav navbar-nav navbar-right">
                         <li>
-                            <a ng-click="model.websiteUpdate(model.editWebsite)"
-                               role="button">
+                            <a role="button"
+                                ng-click="model.websiteNew(model.newWebsite)">
                                 <span class="pull-right glyphicon glyphicon-ok"></span>
                             </a>
                         </li>
                     </ul>
                 </div>
                 <div class="col-xs-12 visible-xs">
-                    <nav class="navbar navbar-default navbar-fixed-top">
                         <div class="container-fluid">
                             <div class="wl">
                                 <a href="#!/user/{{model.userId}}/website"
-                                   role="button"
                                    class="navbar-brand wl-navLeft">
                                     <span class="pull-left glyphicon glyphicon-chevron-left"></span>
                                 </a>
                             </div>
                             <!-- Brand and toggle get grouped for better mobile display -->
-                            <div class="navbar-brand wl-navLeft">Edit Website</div>
-                            <ul class="nav navbar-nav pull-right wl-navRight">
-                                <li>
-                                    <a ng-click="model.websiteUpdate(model.editWebsite)"
-                                       role="button">
-                                        <span class="pull-right glyphicon glyphicon-ok"></span>
-                                    </a>
-                                </li>
-                            </ul>
+                            <div class="navbar-brand wl-navLeft">New Website</div>
+                                <ul class="nav navbar-nav pull-right wl-navRight">
+                                    <li>
+                                        <a ng-click="model.websiteNew(model.user.newWebsite)">
+                                            <span class="pull-right glyphicon glyphicon-ok"></span>
+                                        </a>
+                                    </li>
+                                </ul>
                         </div><!-- /.container-fluid -->
-                    </nav>
                 </div>
             </div>
         </div>
@@ -68,10 +64,10 @@
                 <ul class="list-group">
                     <li class="list-group-item active">
                         <div class="row">
-                            <div class="col-xs-10">Website Name</div>
+                            <div class="col-xs-10">Name</div>
                             <div class="col-xs-2">
                                 <a href="#!/user/{{model.userId}}/website/new"
-                                   role="button">
+                                role="button">
                                     <span class="pull-right glyphicon glyphicon-plus"></span>
                                 </a>
                             </div>
@@ -82,8 +78,7 @@
                         <div class="row">
                             <div class="col-xs-10"><a href="#!/user/{{model.userId}}/website/{{website._id}}/page">{{website.name}}</a></div>
                             <div class="col-xs-2"><a href="#!/user/{{model.userId}}/website/{{website._id}}"> <span class="pull-right glyphicon glyphicon-cog"></span>
-                            </a>
-                            </div>
+                            </a></div>
                         </div>
                     </li>
 
@@ -112,38 +107,32 @@
                 </div>
 
 
-                <div class="col-xs-12 col-sm-8">
-                <label for="name">Website Name</label>
+                <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+                <label for="name">Name</label>
                 <input name="name"
-                       ng-model="model.editWebsite.name"
+                       ng-model="model.newWebsite.name"
                         type="text"
                        id="name"
                        class="form-control"
-                       placeholder="Name"
-                       />
-                <label for="description">Website Description</label>
+                       placeholder="Name"/>
+                <label for="description">Description</label>
                 <textarea name="description"
-                          ng-model="model.editWebsite.description"
+                          ng-model ="model.newWebsite.description"
                           type="text"
                           rows="5" ;
                           id="description"
                           class="form-control"
-                          placeholder="Description">
-                </textarea>
-                    <a class="btn btn-danger btn-block"
-                       role="button"
-                       ng-click="model.websiteDelete(model.websiteId)">Delete</a>
+                          placeholder="Description"></textarea>
             </div>
         </div>
 
-        {{model.websites}}
     </div>
 
     <nav class="navbar navbar-default navbar-fixed-bottom">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <ul class="nav navbar-nav pull-right wl-navRight">
-                <li><a href="#!/user/{{model.userId}}">
+                <li><a href="#!/user/{{model.user._id}}">
                     <span class="pull-right glyphicon glyphicon-user"></span>
                 </a></li>
             </ul>

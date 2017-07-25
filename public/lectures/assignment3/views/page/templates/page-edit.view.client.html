@@ -1,54 +1,51 @@
-<div class="wl wl-website-edit">
-
-    <nav class="navbar navbar-custom navbar-fixed-top">
+ <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-xs-4 hidden-xs">
+                <div class="col-xs-3 visible-lg">
             <!--<div class="wl">-->
-                <a href="#!/user/{{model.userId}}/website"
+                <a href="#!/user/{{model.userId}}/website/{{model.websiteId}}/page"
                    role="button"
                    class="navbar-brand">
                     <span class="pull-left glyphicon glyphicon-chevron-left"></span>
                 </a>
             <!--</div>-->
             <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-brand">Websites</div>
+            <div class="navbar-brand">Pages</div>
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="#!/user/{{model.userId}}/website/new"
-                       role="button">
+                    <a href="#!/user/{{model.userId}}/website/{{model.websiteId}}/page/new">
                         <span class="pull-right glyphicon glyphicon-plus"></span>
                     </a>
                 </li>
             </ul>
         </div>
-                <div class="col-lg-8 hidden-xs">
+                <div class="col-lg-9 visible-lg">
                     <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-brand">Edit Website</div>
+                    <div class="navbar-brand">Edit Page</div>
                     <ul class="nav navbar-nav navbar-right">
                         <li>
-                            <a ng-click="model.websiteUpdate(model.editWebsite)"
+                            <a ng-click="model.updatePage(model.editPage)"
                                role="button">
                                 <span class="pull-right glyphicon glyphicon-ok"></span>
                             </a>
                         </li>
                     </ul>
                 </div>
-                <div class="col-xs-12 visible-xs">
+                <div class="col-xs-12 hidden-lg">
                     <nav class="navbar navbar-default navbar-fixed-top">
                         <div class="container-fluid">
                             <div class="wl">
-                                <a href="#!/user/{{model.userId}}/website"
+                                <a href="#!/user/{{model.userId}}/website/{{model.websiteId}}/page"
                                    role="button"
                                    class="navbar-brand wl-navLeft">
                                     <span class="pull-left glyphicon glyphicon-chevron-left"></span>
                                 </a>
                             </div>
                             <!-- Brand and toggle get grouped for better mobile display -->
-                            <div class="navbar-brand wl-navLeft">Edit Website</div>
+                            <div class="navbar-brand wl-navLeft">Edit Page</div>
                             <ul class="nav navbar-nav pull-right wl-navRight">
                                 <li>
-                                    <a ng-click="model.websiteUpdate(model.editWebsite)"
+                                    <a ng-click="model.updatePage(model.editPage)"
                                        role="button">
                                         <span class="pull-right glyphicon glyphicon-ok"></span>
                                     </a>
@@ -64,79 +61,81 @@
     <div class="container-fluid">
 
         <div class="row">
-            <div class="col-xs-4 hidden-xs">
+            <div class="col-xs-3 visible-lg">
                 <ul class="list-group">
                     <li class="list-group-item active">
                         <div class="row">
-                            <div class="col-xs-10">Website Name</div>
+                            <div class="col-xs-10">Page Name</div>
                             <div class="col-xs-2">
-                                <a href="#!/user/{{model.userId}}/website/new"
-                                   role="button">
+                                <a href="website-new.html">
                                     <span class="pull-right glyphicon glyphicon-plus"></span>
                                 </a>
                             </div>
                         </div>
                     </li>
 
-                    <li ng-repeat="website in model.websites" class="list-group-item">
+                    <li ng-repeat="page in model.pages"
+                            class="list-group-item">
                         <div class="row">
-                            <div class="col-xs-10"><a href="#!/user/{{model.userId}}/website/{{website._id}}/page">{{website.name}}</a></div>
-                            <div class="col-xs-2"><a href="#!/user/{{model.userId}}/website/{{website._id}}"> <span class="pull-right glyphicon glyphicon-cog"></span>
-                            </a>
-                            </div>
+                            <div class="col-xs-10">{{page.name}}</div>
+                            <div class="col-xs-2">
+                                <a role="button"
+                                   href="#!/user/{{model.userId}}/website/{{model.websiteId}}/page/{{page._id}}">
+                                <span class="pull-right glyphicon glyphicon-cog"></span>
+                                </a></div>
                         </div>
                     </li>
 
                     <!--<li class="list-group-item">-->
                         <!--<div class="row">-->
-                            <!--<div class="col-xs-10"><a href="../../page/templates/page-list.view.client.html">Address Book App</a></div>-->
-                            <!--<div class="col-xs-2"><a href="website-edit.view.client.html"> <span class="pull-right glyphicon glyphicon-cog"></span>-->
-                            <!--</a></div>-->
+                            <!--<div class="col-xs-10">Blogs</div>-->
+                            <!--<div class="col-xs-2"><span class="pull-right glyphicon glyphicon-cog"></span></div>-->
                         <!--</div>-->
                     <!--</li>-->
                     <!--<li class="list-group-item">-->
                         <!--<div class="row">-->
-                            <!--<div class="col-xs-10"><a href="../../page/templates/page-list.view.client.html">Script Testing App</a></div>-->
-                            <!--<div class="col-xs-2"><a href="website-edit.view.client.html"> <span class="pull-right glyphicon glyphicon-cog"></span>-->
-                            <!--</a></div>-->
+                            <!--<div class="col-xs-10">Home</div>-->
+                            <!--<div class="col-xs-2"><span class="pull-right glyphicon glyphicon-cog"></span></div>-->
                         <!--</div>-->
                     <!--</li>-->
                     <!--<li class="list-group-item">-->
                         <!--<div class="row">-->
-                            <!--<div class="col-xs-10"><a href="../../page/templates/page-list.view.client.html">Blogger</a></div>-->
-                            <!--<div class="col-xs-2"><a href="website-edit.view.client.html"> <span class="pull-right glyphicon glyphicon-cog"></span>-->
-                            <!--</a></div>-->
+                            <!--<div class="col-xs-10">About</div>-->
+                            <!--<div class="col-xs-2"><span class="pull-right glyphicon glyphicon-cog"></span></div>-->
+                        <!--</div>-->
+                    <!--</li>-->
+                    <!--<li class="list-group-item">-->
+                        <!--<div class="row">-->
+                            <!--<div class="col-xs-10">Contact Us</div>-->
+                            <!--<div class="col-xs-2"><span class="pull-right glyphicon glyphicon-cog"></span></div>-->
                         <!--</div>-->
                     <!--</li>-->
                 </ul>
                 </div>
 
 
-                <div class="col-xs-12 col-sm-8">
-                <label for="name">Website Name</label>
+                <div class="col-xs-12 col-lg-9">
+                <label for="name">Name</label>
                 <input name="name"
-                       ng-model="model.editWebsite.name"
+                       ng-model="model.editPage.name"
                         type="text"
                        id="name"
                        class="form-control"
-                       placeholder="Name"
+                       value="Blog Post"
+                       placeholder="name"
                        />
-                <label for="description">Website Description</label>
-                <textarea name="description"
-                          ng-model="model.editWebsite.description"
-                          type="text"
-                          rows="5" ;
-                          id="description"
+                <label for="title">Title</label>
+                <input name="title"
+                       ng-model="model.editPage.title"
+                        type="text"
+                          id="title"
                           class="form-control"
-                          placeholder="Description">
-                </textarea>
+                          placeholder="Page Title"></input>
                     <a class="btn btn-danger btn-block"
                        role="button"
-                       ng-click="model.websiteDelete(model.websiteId)">Delete</a>
+                       ng-click="model.pageDelete(model.pageId)">Delete</a>
             </div>
         </div>
-
-        {{model.websites}}
     </div>
 
     <nav class="navbar navbar-default navbar-fixed-bottom">
@@ -149,4 +148,3 @@
             </ul>
         </div><!-- /.container-fluid -->
     </nav>
-</div>

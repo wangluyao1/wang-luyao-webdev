@@ -34,19 +34,17 @@
                 <div ng-switch-when="HEADING">
                     <div ng-include="'views/widget/templates/widget-heading.view.client.html'"></div>
                 </div>
-                <div ng-switch-when="HTML"
-                     ng-bind-html ="model.trustHtmlContent(widget.text)">
-                </div>
                 <div ng-switch-when="IMAGE">
                     <div ng-include="'views/widget/templates/widget-image.view.client.html'"></div>
+                </div>
+                <div ng-switch-when="HTML"
+                     ng-bind-html ="model.trustHtmlContent(widget.text)">
                 </div>
                 <div ng-switch-when="YOUTUBE">
                      <div ng-include ="'views/widget/templates/widget-youtube.view.client.html'">
                 </div>
             </div>
         </div>
-
-
     <!--<div class="wl widget">-->
         <!--<div class="wl widget-toolbar">-->
             <!--<span class="pull-right glyphicon glyphicon-align-justify"></span>-->
@@ -100,7 +98,6 @@
             <!--but the options are endless. We set out to find a pair of high-quality, wireless on-ear headphones for-->
             <!--the discerning listener who wants to cruise the streets in style. </p>-->
     <!--</div>-->
-
     </div>
 </div>
 </div>

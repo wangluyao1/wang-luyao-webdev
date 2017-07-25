@@ -29,7 +29,7 @@
         }
 
         function trustHtmlContent(content) {
-            return $sce.trustAsHtml(content);
+            return $sce.trustAsResourceUrl(content);
         }
     }
 })();

@@ -1,6 +1,6 @@
 <div class="wl wl-website-new">
 
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-custom navbar-fixed-top">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xs-4 hidden-xs">
@@ -46,7 +46,8 @@
                             <div class="navbar-brand wl-navLeft">New Website</div>
                                 <ul class="nav navbar-nav pull-right wl-navRight">
                                     <li>
-                                        <a ng-click="model.websiteNew(model.user.newWebsite)">
+                                        <a role="button"
+                                                ng-click="model.websiteNew(model.user.newWebsite)">
                                             <span class="pull-right glyphicon glyphicon-ok"></span>
                                         </a>
                                     </li>
@@ -132,7 +133,7 @@
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <ul class="nav navbar-nav pull-right wl-navRight">
-                <li><a href="#!/user/{{model.user._id}}">
+                <li><a href="#!/user/{{model.userId}}">
                     <span class="pull-right glyphicon glyphicon-user"></span>
                 </a></li>
             </ul>
