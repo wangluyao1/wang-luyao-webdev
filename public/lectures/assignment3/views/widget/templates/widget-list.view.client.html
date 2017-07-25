@@ -1,0 +1,122 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="wl wl-navLeft">
+        <a href="#!/user/{{model.userId}}/website/{{model.websiteId}}/page"
+           role="button"
+           class="navbar-brand wl-navLeft">
+            <span class="pull-left glyphicon glyphicon-chevron-left"></span>
+        </a>
+        </div>
+        <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-brand wl-navLeft">Widgets</div>
+            <ul class="nav navbar-nav pull-right wl-navRight">
+                <li>
+                    <a href="#!/user/{{model.userId}}/website/{{model.websiteId}}/page/{{model.pageId}}/widget/new"
+                       role="button">
+                        <span class="pull-right glyphicon glyphicon-plus"></span>
+                    </a>
+                </li>
+            </ul>
+    </div><!-- /.container-fluid -->
+</nav>
+
+<div class="wl away-from-footer">
+<div class="container-fluid">
+    <div class="wl widget"
+         ng-repeat="widget in model.widgets">
+        <div class="wl widget-toolbar">
+            <span class="pull-right glyphicon glyphicon-align-justify"></span>
+                <a href="#!/user/{{model.userId}}/website/{{model.websiteId}}/page/{{model.pageId}}/widget/{{widget._id}}" class="wl-blackIcon" role="button">
+                    <span class="pull-right glyphicon glyphicon-cog"></span>
+                </a>
+        </div>
+            <div ng-switch="widget.widgetType">
+                <div ng-switch-when="HEADING">
+                    <div ng-include="'views/widget/templates/widget-heading.view.client.html'"></div>
+                </div>
+                <div ng-switch-when="IMAGE">
+                    <div ng-include="'views/widget/templates/widget-image.view.client.html'"></div>
+                </div>
+                <div ng-switch-when="HTML"
+                     ng-bind-html ="model.trustHtmlContent(widget.text)">
+                </div>
+                <div ng-switch-when="YOUTUBE">
+                     <div ng-include ="'views/widget/templates/widget-youtube.view.client.html'">
+                </div>
+            </div>
+        </div>
+    <!--<div class="wl widget">-->
+        <!--<div class="wl widget-toolbar">-->
+            <!--<span class="pull-right glyphicon glyphicon-align-justify"></span>-->
+            <!--<span class="pull-right glyphicon glyphicon-cog"></span>-->
+        <!--</div>-->
+        <!--<h3>Companies Don’t Have a First Amendment Right to Talk About National Security Letters, Court Rules</h3>-->
+    <!--</div>-->
+    <!--<div class="wl widget">-->
+        <!--<div class="wl widget-toolbar">-->
+            <!--<span class="pull-right glyphicon glyphicon-align-justify"></span>-->
+            <!--<a href="widget-image.view.client.html" class="wl-blackIcon"> <span class="pull-right glyphicon glyphicon-cog"></span>-->
+            <!--</a>-->
+        <!--</div>-->
+        <!--<img src="https://i.kinja-img.com/gawker-media/image/upload/fa4sce6uh8iizbkdb63y.jpg">-->
+    <!--</div>-->
+    <!--<div class="wl widget">-->
+        <!--<div class="wl widget-toolbar">-->
+            <!--<span class="pull-right glyphicon glyphicon-align-justify"></span>-->
+            <!--<span class="pull-right glyphicon glyphicon-cog"></span>-->
+        <!--</div>-->
+        <!--<p>Cloudflare and Credo Mobile today lost their fight to speak publicly-->
+            <!--about the National Security Letters they and other tech companies receive,-->
+            <!--which demand user data and frequently forbid companies from ever disclosing the demands to their users.-->
+            <!--The two companies received NSLs from the FBI in 2011 and 2013, requiring them to secretly disclose account information. </p>-->
+    <!--</div>-->
+    <!--<div class="wl widget">-->
+        <!--<div class="wl widget-toolbar">-->
+            <!--<span class="pull-right glyphicon glyphicon-align-justify"></span>-->
+            <!--<span class="pull-right glyphicon glyphicon-cog"></span>-->
+        <!--</div>-->
+        <!--<h3>Three Great Wireless Headphones That Are Better Than Beats</h3>-->
+    <!--</div>-->
+    <!--<div class="wl widget">-->
+        <!--<div class="wl widget-toolbar">-->
+            <!--<span class="pull-right glyphicon glyphicon-align-justify"></span>-->
+            <!--<a href="widget-youtube.view.client.html" class="wl-blackIcon"> <span class="pull-right glyphicon glyphicon-cog"></span>-->
+            <!--</a>-->
+        <!--</div>-->
+        <!--<div class="wl video">-->
+            <!--<iframe class="wl videoFrame"-->
+                    <!--src="https://www.youtube.com/embed/mV7NxSxWlyg">-->
+            <!--</iframe>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="wl widget">-->
+        <!--<div class="wl widget-toolbar">-->
+            <!--<span class="pull-right glyphicon glyphicon-align-justify"></span>-->
+            <!--<span class="pull-right glyphicon glyphicon-cog"></span>-->
+        <!--</div>-->
+        <!--<p>Wireless headphones are rapidly becoming a necessity in our dongle-tangled gadget universe,-->
+            <!--but the options are endless. We set out to find a pair of high-quality, wireless on-ear headphones for-->
+            <!--the discerning listener who wants to cruise the streets in style. </p>-->
+    <!--</div>-->
+    </div>
+</div>
+</div>
+
+<nav class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container-fluid">
+        <a href="" class="navbar-brand">
+            <span class="pull-left glyphicon glyphicon-play">
+            </span>
+        </a>
+        <a href="" class="navbar-brand">
+            <span class="glyphicon glyphicon-eye-open">
+            </span>
+        </a>
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <ul class="nav navbar-nav pull-right wl-navRight">
+            <li><a href="#!/user/{{model.userId}}">
+                <span class="pull-right glyphicon glyphicon-user"></span>
+            </a></li>
+        </ul>
+    </div><!-- /.container-fluid -->
+</nav>

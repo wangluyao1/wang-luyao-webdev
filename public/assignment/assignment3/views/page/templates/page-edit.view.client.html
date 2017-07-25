@@ -1,0 +1,150 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-3 visible-lg">
+                <!--<div class="wl">-->
+                <a href="#!/user/{{model.userId}}/website/{{model.websiteId}}/page"
+                   role="button"
+                   class="navbar-brand">
+                    <span class="pull-left glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <!--</div>-->
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-brand">Pages</div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#!/user/{{model.userId}}/website/{{model.websiteId}}/page/new">
+                            <span class="pull-right glyphicon glyphicon-plus"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-9 visible-lg">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-brand">Edit Page</div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a ng-click="model.pageUpdate(model.editPage)"
+                           role="button">
+                            <span class="pull-right glyphicon glyphicon-ok"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-xs-12 hidden-lg">
+                <nav class="navbar navbar-default navbar-fixed-top">
+                    <div class="container-fluid">
+                        <div class="wl">
+                            <a href="#!/user/{{model.userId}}/website/{{model.websiteId}}/page"
+                               role="button"
+                               class="navbar-brand wl-navLeft">
+                                <span class="pull-left glyphicon glyphicon-chevron-left"></span>
+                            </a>
+                        </div>
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-brand wl-navLeft">Edit Page</div>
+                        <ul class="nav navbar-nav pull-right wl-navRight">
+                            <li>
+                                <a ng-click="model.pageUpdate(model.editPage)"
+                                   role="button">
+                                    <span class="pull-right glyphicon glyphicon-ok"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div><!-- /.container-fluid -->
+                </nav>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-xs-3 visible-lg">
+            <ul class="list-group">
+                <li class="list-group-item active">
+                    <div class="row">
+                        <div class="col-xs-10">Page Name</div>
+                        <div class="col-xs-2">
+                            <a href="#!/user/{{model.userId}}/website/{{model.websiteId}}/page/new">
+                                <span class="pull-right glyphicon glyphicon-plus"></span>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+
+                <li ng-repeat="page in model.pages"
+                    class="list-group-item">
+                    <div class="row">
+                        <div class="col-xs-10">{{page.name}}</div>
+                        <div class="col-xs-2">
+                            <a role="button"
+                               href="#!/user/{{model.userId}}/website/{{model.websiteId}}/page/{{page._id}}">
+                                <span class="pull-right glyphicon glyphicon-cog"></span>
+                            </a></div>
+                    </div>
+                </li>
+
+                <!--<li class="list-group-item">-->
+                <!--<div class="row">-->
+                <!--<div class="col-xs-10">Blogs</div>-->
+                <!--<div class="col-xs-2"><span class="pull-right glyphicon glyphicon-cog"></span></div>-->
+                <!--</div>-->
+                <!--</li>-->
+                <!--<li class="list-group-item">-->
+                <!--<div class="row">-->
+                <!--<div class="col-xs-10">Home</div>-->
+                <!--<div class="col-xs-2"><span class="pull-right glyphicon glyphicon-cog"></span></div>-->
+                <!--</div>-->
+                <!--</li>-->
+                <!--<li class="list-group-item">-->
+                <!--<div class="row">-->
+                <!--<div class="col-xs-10">About</div>-->
+                <!--<div class="col-xs-2"><span class="pull-right glyphicon glyphicon-cog"></span></div>-->
+                <!--</div>-->
+                <!--</li>-->
+                <!--<li class="list-group-item">-->
+                <!--<div class="row">-->
+                <!--<div class="col-xs-10">Contact Us</div>-->
+                <!--<div class="col-xs-2"><span class="pull-right glyphicon glyphicon-cog"></span></div>-->
+                <!--</div>-->
+                <!--</li>-->
+            </ul>
+        </div>
+
+
+        <div class="col-xs-12 col-lg-9">
+            <label for="name">Name</label>
+            <input name="name"
+                   ng-model="model.editPage.name"
+                   type="text"
+                   id="name"
+                   class="form-control"
+                   value="Blog Post"
+                   placeholder="name"
+            />
+            <label for="title">Title</label>
+            <input name="title"
+                   ng-model="model.editPage.title"
+                   type="text"
+                   id="title"
+                   class="form-control"
+                   placeholder="Page Title"></input>
+            <a class="btn btn-danger btn-block"
+               role="button"
+               ng-click="model.pageDelete(model.pageId)">Delete</a>
+        </div>
+    </div>
+</div>
+
+<nav class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <ul class="nav navbar-nav pull-right wl-navRight">
+            <li><a href="#!/user/{{model.userId}}">
+                <span class="pull-right glyphicon glyphicon-user"></span>
+            </a></li>
+        </ul>
+    </div><!-- /.container-fluid -->
+</nav>
