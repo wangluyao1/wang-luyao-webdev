@@ -14,7 +14,12 @@
         model.unregister = unregister;
 
         function init() {
-            model.user = userService.findUserById(model.userId);
+            //model.user = userService.findUserById(model.userId);
+            var promise = userService.findUserById(model.userId);
+            promise.then(function (response) {
+                model.user = response.data;
+            })
+
         }
 
         init();

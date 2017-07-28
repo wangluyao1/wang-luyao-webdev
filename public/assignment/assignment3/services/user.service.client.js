@@ -7,7 +7,7 @@
         .module("WebAppMaker")
         .service("userService", userService);
 
-    function userService() {
+    function userService($http) {
         var userData = [
             {_id: "123", username: "alice", password: "alice", firstName: "Alice", lastName: "Wonder"},
             {_id: "234", username: "bob", password: "bob", firstName: "Bob", lastName: "Marley"},
@@ -30,13 +30,15 @@
         }
 
         function findUserById(userId) {
-            for (var u in userData) {
-                var _user = userData[u];
-                if (_user._id === userId) {
-                    return _user;
-                }
-            }
-            return null;
+            var url = "/api/user/" + userId;
+            return $http.get(url);
+            // for (var u in userData) {
+            //     var _user = userData[u];
+            //     if (_user._id === userId) {
+            //         return _user;
+            //     }
+            // }
+            // return null;
         }
 
         function findUserByUserName(username) {
@@ -50,13 +52,15 @@
         }
 
         function findUserByCredentials(username, password) {
-            for (var u in userData) {
-                var _user = userData[u];
-                if (_user.username === username && _user.password === password) {
-                    return _user;
-                }
-            }
-            return null;
+            var url = "/api/user?username="+username+"&password=" + password;
+            return $http.get(url);
+            // for (var u in userData) {
+            //     var _user = userData[u];
+            //     if (_user.username === username && _user.password === password) {
+            //         return _user;
+            //     }
+            // }
+            // return null;
         }
 
         function updateUser(userId, user) {
