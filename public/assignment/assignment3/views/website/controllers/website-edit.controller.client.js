@@ -14,22 +14,35 @@
         model.websiteDelete = websiteDelete;
 
         function init() {
-            model.websites = websiteService.findWebsitesByUser(model.userId);
-            var website = websiteService.findWebsiteById(model.websiteId);
-            //when not click ok, not directly change the element in the array.
-            model.editWebsite = JSON.parse(JSON.stringify(website));
+            websiteService.findWebsitesByUser(model.userId)
+                .then(function (response) {
+                    model.websites = response.data;
+                });
+            websiteService.findWebsiteById(model.websiteId)
+                .then(function (response) {
+                    var website = response.data;
+                    //when not click ok, not directly change the element in the array.
+                    model.editWebsite = JSON.parse(JSON.stringify(website));
+                });
+
+
         }
 
         init();
 
         function websiteUpdate(website) {
-            websiteService.updateWebsite(model.websiteId, website);
-            $location.url("user/" + model.userId + "/website");
+            websiteService.updateWebsite(model.websiteId, website)
+                .then(function (response) {
+                    var updatedWeb = response.data;
+                    $location.url("user/" + updatedWeb.developerId + "/website");
+                });
         }
 
         function websiteDelete() {
-            websiteService.deleteWebsite(model.websiteId);
-            $location.url("user/" + model.userId + "/website");
+            websiteService.deleteWebsite(model.websiteId)
+                .then(function (response) {
+                    $location.url("user/" + model.userId + "/website");
+                });
         }
     }
 })();

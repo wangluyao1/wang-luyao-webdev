@@ -6,7 +6,7 @@
         .module("WebAppMaker")
         .controller("ProfileController", ProfileController)
 
-    function ProfileController($routeParams, userService) {
+    function ProfileController($routeParams, userService,$location) {
         var model = this;
         model.userId = $routeParams["uid"];
 
@@ -25,11 +25,20 @@
         init();
 
         function updateUser(user) {
-            userService.updateUser(user._id, user);
+            var promise = userService.updateUser(model.userId, user);
+            promise.then(function (response) {
+            });
         }
 
-        function unregister(user) {
-            userService.deleteUser(user._id);
+        function unregister() {
+            userService.deleteUser(model.userId)
+                .then(function (response) {
+                    console.log(response.status);
+                    if(response.status === 200) {
+                        $location.url("/login");
+                    }
+                });
+
         }
     }
 })();
