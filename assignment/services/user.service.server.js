@@ -87,4 +87,5 @@ function deleteUser(req,res) {
             return;
         }
     }
+    res.sendStatus(404);
 }

@@ -62,6 +62,7 @@ function updateWebsite(req,res) {
             return;
         }
     }
+    res.sendStatus(404);
 }
 
 function deleteWebsite(req,res) {

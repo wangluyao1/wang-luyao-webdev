@@ -13,16 +13,20 @@
         model.pageNew = pageNew;
 
         function init() {
-            model.pages = pageService.findPageByWebsiteId(model.websiteId);
+            pageService.findPageByWebsiteId(model.websiteId)
+                .then(function (response) {
+                    model.pages = response.data;
+                });
         }
 
         init();
 
         function pageNew(newPage) {
-            newPage.websiteId = model.websiteId;
-            newPage._id = (new Date().getTime()).toString();
-            pageService.createPage(model.websiteId, newPage);
-            $location.url("user/" + model.userId + "/website/" + model.websiteId + "/page");
+
+            pageService.createPage(model.websiteId, newPage)
+                .then(function (response) {
+                    $location.url("user/" + model.userId + "/website/" + model.websiteId + "/page");
+                });
         }
     }
 })();
