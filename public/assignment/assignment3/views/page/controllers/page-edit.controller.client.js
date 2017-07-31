@@ -15,24 +15,35 @@
         model.pageDelete = pageDelete;
 
         function init() {
-            model.pages = pageService.findPageByWebsiteId(model.websiteId);
-            var editPage = pageService.findPageById(model.pageId);
-            //when not click ok, not directly change the element in the array.
-            model.editPage = JSON.parse(JSON.stringify(editPage));
+            pageService.findPageByWebsiteId(model.websiteId)
+                .then(function (response) {
+                    model.pages = response.data;
+                });
+            pageService.findPageById(model.pageId)
+                .then(function (response) {
+                    var editPage = response.data;
+                    //when not click ok, not directly change the element in the array.
+                    model.editPage = JSON.parse(JSON.stringify(editPage));
+                });
+
         }
 
         init();
 
         function pageUpdate(newPage) {
-            newPage.websiteId = model.websiteId;
-            newPage._id = model.pageId;
-            pageService.updatePage(model.pageId, newPage);
-            $location.url("user/" + model.userId + "/website/" + model.websiteId + "/page");
+            pageService.updatePage(model.pageId, newPage)
+                .then(function (response) {
+                    $location.url("user/" + model.userId + "/website/" + model.websiteId + "/page");
+                });
+
         }
 
         function pageDelete() {
-            pageService.deletePage(model.pageId);
-            $location.url("user/" + model.userId + "/website/" + model.websiteId + "/page");
+            pageService.deletePage(model.pageId)
+                .then(function (response) {
+                    $location.url("user/" + model.userId + "/website/" + model.websiteId + "/page");
+                });
+
         }
     }
 })();

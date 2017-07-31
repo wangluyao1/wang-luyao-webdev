@@ -16,6 +16,7 @@
     <div class="container-fluid">
         <label for="username">Username</label>
         <input name="username"
+               readonly
                ng-model="model.user.username"
                type="text"
                id="username"
@@ -50,6 +51,9 @@
         <a class="btn btn-primary btn-block"
            href="#!/user/{{model.user._id}}/website"
            role="button">Websites</a>
+        <a class="btn btn-warning btn-block"
+           ng-click="model.unregister()"
+           role="button">Unregister</a>
         <a class="btn btn-danger btn-block"
            href="#!/login"
            role="button">Logout</a>

@@ -6,7 +6,7 @@
         .module("WebAppMaker")
         .service("websiteService", websiteService);
 
-    function websiteService() {
+    function websiteService($http) {
         var websiteData = [
             {"_id": "123", "name": "Facebook", "developerId": "456", "description": "Lorem"},
             {"_id": "234", "name": "Tweeter", "developerId": "456", "description": "Lorem"},
@@ -27,46 +27,56 @@
 
         return api;
 
-        function createWebsite(website) {
-            websiteData.push(website);
+        function createWebsite(developerId,website) {
+            var url = "/api/user/"+ developerId+"/website";
+            return $http.post(url,website);
+            //websiteData.push(website);
         }
 
         function findWebsitesByUser(userId) {
-            var websites = [];
-            for (var u in websiteData) {
-                var website = websiteData[u];
-                if (website.developerId === userId) {
-                    websites.push(website);
-                }
-            }
-            return websites;
+            var url = "/api/user/"+ userId+"/website";
+            return $http.get(url);
+            // var websites = [];
+            // for (var u in websiteData) {
+            //     var website = websiteData[u];
+            //     if (website.developerId === userId) {
+            //         websites.push(website);
+            //     }
+            // }
+            // return websites;
         }
 
         function findWebsiteById(websiteId) {
-            for (var u in websiteData) {
-                var website = websiteData[u];
-                if (website._id === websiteId) {
-                    return website;
-                }
-            }
-            return null;
+            var url = "/api/website/"+ websiteId;
+            return $http.get(url);
+            // for (var u in websiteData) {
+            //     var website = websiteData[u];
+            //     if (website._id === websiteId) {
+            //         return website;
+            //     }
+            // }
+            // return null;
         }
 
         function updateWebsite(websiteId, website) {
-            var _website = findWebsiteById(websiteId);
-            if (_website != null) {
-                var index = websiteData.indexOf(_website);
-                websiteData[index] = website;
-            }
+            var url = "/api/website/"+websiteId;
+            return $http.put(url,website);
+            // var _website = findWebsiteById(websiteId);
+            // if (_website != null) {
+            //     var index = websiteData.indexOf(_website);
+            //     websiteData[index] = website;
+            // }
         }
 
         function deleteWebsite(websiteId) {
-            var _website = findWebsiteById(websiteId);
-            console.log(_website);
-            if (_website != null) {
-                var index = websiteData.indexOf(_website);
-                websiteData.splice(index, 1);
-            }
+            var url = "/api/website/"+websiteId;
+            return $http.delete(url);
+            // var _website = findWebsiteById(websiteId);
+            // console.log(_website);
+            // if (_website != null) {
+            //     var index = websiteData.indexOf(_website);
+            //     websiteData.splice(index, 1);
+            // }
         }
     }
 })();

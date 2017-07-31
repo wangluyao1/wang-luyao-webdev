@@ -18,18 +18,22 @@
         init();
 
         function login(user) {
-            if (!user) {
-                model.alert = "Unable to log in.";
-                //model.errorMessage = "User not found";
-                return;
-            }
-            user = userService.findUserByCredentials(user.username, user.password);
-            if (user === null) {
-                //model.errorMessage = "User not found";
-                model.alert = "Unable to log in.";
-            } else {
-                $location.url("user/" + user._id);
-            }
+            var promise = userService.findUserByCredentials(user.username, user.password);
+            promise.then(function (response) {
+                if(response.data === "0"){
+                    model.alert = "Unable to log in.";
+                } else {
+                    $location.url("user/" + response.data._id);
+
+                }
+            })
+
+            // user = userService.findUserByCredentials(user.username, user.password);
+            // if (user === null) {
+            //     model.alert = "Unable to log in.";
+            // } else {
+            //     $location.url("user/" + user._id);
+            // }
         }
     }
 })();
