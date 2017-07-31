@@ -13,6 +13,6 @@ https://wang-luyao-webdev.herokuapp.com/project/index.html
 Assignment 2:
 https://wang-luyao-webdev.herokuapp.com/assignment/assignment2/
 
-Assignment 3:
+Assignment 3 and Assignment 4:
 https://wang-luyao-webdev.herokuapp.com/assignment/assignment3/
 
