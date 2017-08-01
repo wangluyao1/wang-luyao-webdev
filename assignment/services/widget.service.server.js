@@ -3,7 +3,7 @@
  */
 var app = require("../../express");
 var multer = require("../../node_modules/multer");
-var upload = multer({ dest: __dirname+'/../../public/assignment/uploads' });
+var upload = multer({ dest: __dirname+'/../../public/uploads' });
 
 var widgetData = [
     {"_id": "123", "widgetType": "HEADING", "pageId": "321", "size": 2, "text": "GIZMODO"},
@@ -62,8 +62,7 @@ function uploadImage(req, res) {
             break;
         }
     }
-    widget.url = '/assignment/uploads/'+ filename.toString();
-
+    widget.url = '/uploads/'+ filename.toString();
     var callbackUrl   = "/assignment/assignment3/#!/user/"+userId+"/website/"+websiteId + "/page/"+pageId
     +"/widget";
 
