@@ -2,7 +2,6 @@
  * Created by Luyao on 7/20/2017.
  */
 (function () {
-
     angular
         .module("WebAppMaker")
         .service("userService", userService);

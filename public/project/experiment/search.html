@@ -1,0 +1,46 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand pull-left" href="#">What We Eat</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+
+<label for="searchKeyWord">Search Restaurants By Street Address</label>
+<input class="form-control"
+       id = "searchKeyWord"
+       name = "searchKeyWord"
+       placeholder="316 W. Washington Ave., Madison, WI"
+       ng-model="keyword"/>
+
+<a class="btn btn-lg btn-default pull-right"
+   role="button"
+   ng-click="model.searchRestaurants(keyword)">Search </a>
+
+<table class="table">
+    <tr ng-repeat="restaurant in model.restaurants">
+        <td>
+            <img src= {{restaurant.logoUrl}}>
+        </td>
+
+        <td>
+            <a href="#!/details/{{restaurant.apiKey}}">
+                {{restaurant.name}}
+            </a>
+        </td>
+    </tr>
+
+</table>
