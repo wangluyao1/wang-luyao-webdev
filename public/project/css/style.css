@@ -1,0 +1,10 @@
+body{
+    margin-top: 60px;
+}
+
+.btn-default {
+    margin:10px;
+    color: #fcf4f4;
+    background-color: #337ab7;
+    border-color: #fcfcfc;
+}
