@@ -1,0 +1,22 @@
+<div class="col-xs-12">
+    <label for="name">Name</label>
+    <input name="name"
+           ng-model="model.widget.name"
+           type="text"
+           id="name"
+           class="form-control"
+           placeholder="name"
+    />
+    <label for="text">Text</label>
+    <input name="text"
+           ng-model="model.widget.text"
+           type="text"
+           id="text"
+           class="form-control"
+           placeholder="text"
+           value="US Senate Reaches Compromise">
+    </input>
+    <a class="btn btn-danger btn-block"
+       ng-click="model.widgetDelete()"
+       role="button">Delete</a>
+</div>

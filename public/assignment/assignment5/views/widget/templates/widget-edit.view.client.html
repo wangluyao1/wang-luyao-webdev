@@ -1,0 +1,58 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <nav class="navbar navbar-default navbar-fixed-top">
+                    <div class="container-fluid">
+                        <div class="wl">
+                            <a href="#!/user/{{model.userId}}/website/{{model.websiteId}}/page/{{model.pageId}}/widget"
+                               role="button"
+                               class="navbar-brand wl-navLeft">
+                                <span class="pull-left glyphicon glyphicon-chevron-left"></span>
+                            </a>
+                        </div>
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-brand wl-navLeft">Widget Editing</div>
+                        <ul class="nav navbar-nav pull-right wl-navRight">
+                            <li>
+                                <a ng-click="model.widgetUpdate(model.widget)"
+                                   role="button">
+                                    <span class="pull-right glyphicon glyphicon-ok"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div><!-- /.container-fluid -->
+                </nav>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div ng-switch="model.widget.widgetType">
+        <div ng-switch-when="HEADING">
+            <div ng-include src="'views/widget/editors/widget-heading-edit.view.client.html'"></div>
+        </div>
+        <div ng-switch-when="HTML">
+            <div ng-include src="'views/widget/editors/widget-html-edit.view.client.html'"></div>
+        </div>
+        <div ng-switch-when="IMAGE">
+            <div ng-include src="'views/widget/editors/widget-image-edit.view.client.html'"></div>
+        </div>
+        <div ng-switch-when="YOUTUBE">
+            <div ng-include src="'views/widget/editors/widget-youtube-edit.view.client.html'"></div>
+        </div>
+    </div>
+</div>
+
+<nav class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <ul class="nav navbar-nav pull-right wl-navRight">
+            <li><a href="#!/user/{{model.userId}}"
+                   role="button">
+                <span class="pull-right glyphicon glyphicon-user"></span>
+            </a></li>
+        </ul>
+    </div><!-- /.container-fluid -->
+</nav>

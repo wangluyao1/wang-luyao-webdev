@@ -1,0 +1,64 @@
+<div class="col-xs-12">
+    <label for="name">Name</label>
+    <input name="name"
+           ng-model="model.widget.name"
+           type="text"
+           id="name"
+           class="form-control"
+           placeholder="name"
+    />
+    <label for="text">Text</label>
+    <input name="text"
+           ng-model="model.widget.text"
+           type="text"
+           id="text"
+           class="form-control"
+           placeholder="text"></input>
+    <label for="url">URL</label>
+    <input name="url"
+           ng-model="model.widget.url"
+           type="url"
+           id="url"
+           class="form-control"
+           placeholder="url">
+    </input>
+    <label for="width">Width</label>
+    <!--can be percentage ...px ..., so the type is text-->
+    <input name="width"
+           ng-model="model.widget.width"
+           type="text"
+           id="width"
+           class="form-control"
+           placeholder="width"
+           value="100%">
+    </input>
+
+    <label>Upload</label>
+
+    <form action="/api/upload"   method="post" enctype="multipart/form-data">
+        <input  name="myFile"    type="file" class="form-control"/>
+        <input  name="width"     value="{{model.widget.width}}" style="display: none"/>
+        <input  name="userId"    value="{{model.userId}}"   style="display: none"/>
+        <input  name="websiteId" value="{{model.websiteId}}"   style="display: none"/>
+        <input  name="pageId"    value="{{model.pageId}}"   style="display: none"/>
+        <input  name="widgetId"  value="{{model.widget._id}}"   style="display: none"/>
+        <button type="submit"    class="wl-button btn btn-block btn-primary">Upload Image</button>
+    </form>
+
+    <a class="wl-button btn btn-success btn-block"
+       role="button"
+       href="#!/user/{{model.userId}}/website/{{model.websiteId}}/page/{{model.pageId}}/widget/{{model.widgetId}}/searchImg">Search</a>
+    <!--<input name="upload"-->
+           <!--ng-model="model.widget.file"-->
+           <!--type="file"-->
+           <!--id="upload"-->
+           <!--class="form-control">-->
+    <!--</input>-->
+
+    <!--<a class="btn btn-primary btn-block"-->
+       <!--role="button"-->
+       <!--ng-click="model.widgetUpdate(model.widget)">Upload Image</a>-->
+    <a class="wl-button btn btn-danger btn-block"
+       role="button"
+       ng-click="model.widgetDelete()">Delete</a>
+</div>

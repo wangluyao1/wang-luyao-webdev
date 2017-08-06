@@ -108,6 +108,10 @@ function updateWidget(req,res) {
     var widget = req.body;
     for(var u in widgetData){
         if(widgetData[u]._id === widgetId){
+            var originalWidget = widgetData[u];
+            if(!widget.width){
+                widget.width = originalWidget.width;
+            }
             widgetData[u] = widget;
             res.sendStatus(200);
             return;
