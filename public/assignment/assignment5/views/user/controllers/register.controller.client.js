@@ -21,7 +21,7 @@
             var promise = userService.findUserByUserName(user.username);
             promise.then(function (response) {
                 var responseUser = response.data;
-                if (responseUser !== "0") {
+                if (responseUser) {
                     model.alert = "User already exists.";
                     return;
                 }

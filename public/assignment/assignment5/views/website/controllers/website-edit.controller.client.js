@@ -34,7 +34,7 @@
             websiteService.updateWebsite(model.websiteId, website)
                 .then(function (response) {
                     var updatedWeb = response.data;
-                    $location.url("user/" + updatedWeb.developerId + "/website");
+                    $location.url("user/" + model.userId + "/website");
                 });
         }
 

@@ -20,7 +20,7 @@
         function login(user) {
             var promise = userService.findUserByCredentials(user.username, user.password);
             promise.then(function (response) {
-                if(response.data === "0"){
+                if(!response.data){
                     model.alert = "Unable to log in.";
                 } else {
                     $location.url("user/" + response.data._id);

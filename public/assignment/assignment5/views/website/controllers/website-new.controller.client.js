@@ -24,7 +24,7 @@
             websiteService.createWebsite(model.userId,newWebsite)
                 .then(function (response) {
                     var newWebsite = response.data;
-                    $location.url("user/" + newWebsite.developerId + "/website");
+                    $location.url("user/" + model.userId + "/website");
                 });
         }
     }

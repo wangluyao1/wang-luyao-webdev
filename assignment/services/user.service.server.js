@@ -98,7 +98,7 @@ function updateUser(req,res) {
     userModel
         .updateUser(userId,user)
         .then(function (status) {
-            res.send(status);
+            res.json(status);
         },function (err) {
             res.sendStatus(404).send(err);
         });
@@ -117,7 +117,7 @@ function deleteUser(req,res) {
     userModel
         .deleteUser(userId)
         .then(function (status) {
-            res.send(status);
+            res.json(status);
         },function (err) {
             res.sendStatus(404).send(err);
         });
