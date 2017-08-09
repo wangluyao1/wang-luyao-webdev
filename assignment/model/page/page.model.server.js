@@ -15,6 +15,10 @@ pageModel.deletePage = deletePage;
 //for website
 pageModel.deletePageForWebsite =deletePageForWebsite;
 
+//for widget
+pageModel.addWidget = addWidget;
+pageModel.removeWidget = removeWidget;
+
 module.exports = pageModel;
 
 function createPage(websiteId,page) {
@@ -54,11 +58,38 @@ function deletePage(pageId) {
 }
 
 function deletePageForWebsite(websiteId) {
+    var widgetModel = require("../widget/widget.model.server");
+
     return pageModel
         .find({_website:websiteId})
         .then(function (pages) {
             var pagesTemp = pages;
             return pageModel
                 .deleteMany({_website:websiteId})
+                .then(function () {
+                    return pagesTemp.forEach(function (page) {
+                        return widgetModel
+                            .deleteWidgetsForPage(page._id);
+                    })
+                })
         });
+}
+
+function addWidget(pageId,widgetId) {
+    pageModel
+        .findById(pageId)
+        .then(function (pageDoc) {
+            pageDoc.widgets.push(widgetId);
+            return pageDoc.save();
+        })
+}
+
+function removeWidget(pageId,widgetId) {
+    pageModel
+        .findById(pageId)
+        .then(function (page) {
+            var index = page.widgets.indexOf(widgetId);
+            page.widgets.splice(index,1);
+            return page.save();
+        })
 }

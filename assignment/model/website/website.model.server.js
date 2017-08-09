@@ -62,11 +62,9 @@ function deleteWebsite(websiteId) {
 }
 
 function addPage(websiteId,pageId) {
-    console.log("hererrrrrrrrrrrrrrrr"+"wid"+websiteId);
     websiteModel
         .findWebsiteById(websiteId)
         .then(function (website) {
-            console.log(website);
             website.pages.push(pageId);
             return website.save();
         });
