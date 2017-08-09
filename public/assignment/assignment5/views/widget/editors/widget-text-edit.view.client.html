@@ -13,12 +13,6 @@
         ['ul','ol'],['justifyLeft','justifyCenter','justifyRight','justifyFull'],
         ['indent','outdent'],['html']]"
     ></div>
-    <input ng-if="!model.widget.formatted && (!model.widget.rows || widget.rows===1)"
-           placeholder="{{model.widget.placeholder}}" class="form-control"/>
-    <textarea ng-if="!model.widget.formatted && (model.widget.rows > 1)"
-              rows="{{model.widget.rows}}" placeholder="{{model.widget.placeholder}}"
-              class="form-control">{{model.widget.text}}</textarea>
-
 
     <a class="btn btn-danger btn-block"
        ng-click="model.widgetDelete()"

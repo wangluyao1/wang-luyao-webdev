@@ -45,6 +45,10 @@
                     <div ng-include="'views/widget/templates/widget-youtube.view.client.html'">
                     </div>
                 </div>
+                <div ng-switch-when="INPUT">
+                    <div ng-include="'views/widget/templates/widget-text.view.client.html'">
+                    </div>
+                </div>
             </div>
 
 
@@ -104,8 +108,6 @@
 
         </div>
     </div>
-
-    {{model.widgets}}
 </div>
 
 <nav class="navbar navbar-default navbar-fixed-bottom">
