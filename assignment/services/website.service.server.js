@@ -96,10 +96,9 @@ function updateWebsite(req,res) {
 }
 
 function deleteWebsite(req,res) {
-    var userId = req.params.userId;
     var websiteId = req.params.websiteId;
     websiteModel
-        .deleteWebsite(userId,websiteId)
+        .deleteWebsite(websiteId)
         .then(function (status) {
             res.json(status);
         },function (err) {

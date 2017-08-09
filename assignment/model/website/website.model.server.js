@@ -13,6 +13,10 @@ websiteModel.findWebsiteById = findWebsiteById;
 websiteModel.updateWebsite = updateWebsite;
 websiteModel.deleteWebsite = deleteWebsite;
 
+//for pages
+websiteModel.addPage = addPage;
+websiteModel.removePage = removePage;
+
 module.exports = websiteModel;
 
 function createWebsiteForUser(userId,website) {
@@ -42,11 +46,38 @@ function updateWebsite(websiteId,website) {
     return websiteModel.update({_id:websiteId},{$set:website});
 }
 
-function deleteWebsite(userId,websiteId) {
+function deleteWebsite(websiteId) {
+    var pageModel = require("../page/page.model.server");
+
     return websiteModel
         .findByIdAndRemove({_id:websiteId})
         .then(function (website) {
             return userModel
                 .removeWebsite(website._user,website._id);
+        })
+        .then(function () {
+            return pageModel
+                .deletePageForWebsite(websiteId);
+        });
+}
+
+function addPage(websiteId,pageId) {
+    console.log("hererrrrrrrrrrrrrrrr"+"wid"+websiteId);
+    websiteModel
+        .findWebsiteById(websiteId)
+        .then(function (website) {
+            console.log(website);
+            website.pages.push(pageId);
+            return website.save();
+        });
+}
+
+function removePage(websiteId,pageId) {
+    return websiteModel
+        .findById(websiteId)
+        .then(function (website) {
+            var index = website.pages.indexOf(pageId);
+            website.pages.splice(index,1);
+            return website.save();
         });
 }
