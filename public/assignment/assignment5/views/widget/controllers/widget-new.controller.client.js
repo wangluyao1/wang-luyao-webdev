@@ -16,6 +16,7 @@
         model.widgetNewImage = widgetNewImage;
         model.widgetNewYoutube = widgetNewYoutube;
         model.widgetNewHTML = widgetNewHTML;
+        model.widgetNewText = widgetNewText;
 
         function init() {
         }
@@ -49,6 +50,11 @@
 
         function widgetNewHTML() {
             var typeHTML = "HTML";
+            widgetNew(typeHTML);
+        }
+
+        function widgetNewText() {
+            var typeHTML = "INPUT";
             widgetNew(typeHTML);
         }
     }
