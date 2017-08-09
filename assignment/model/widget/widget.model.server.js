@@ -58,8 +58,8 @@ function reorderWidget(pageId,start,end) {
     return pageModel
         .findById(pageId)
         .then(function (page) {
-            var widgetChange = page.widget.splice(start,1);
-            page.widget.splice(end,0,widgetChange);
+            var widgetChange = page.widgets.splice(start,1);
+            page.widgets.splice(end,0,widgetChange);
             return page.save();
         })
 }

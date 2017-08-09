@@ -7,15 +7,18 @@
            class="form-control"
            placeholder="name"
     />
-    <label for="text">Text</label>
-    <input name="text"
-           ng-model="model.widget.text"
-           type="text"
-           id="text"
-           class="form-control"
-           placeholder="text"
-           value="US Senate Reaches Compromise">
-    </input>
+
+    <!--<label for="text">Text</label>-->
+    <label>HTML</label>
+    <div ng-model="model.widget.text"
+         text-angular
+         taOptions.toolbar="[['h1','h2','h3'],
+                 ['bold','italics','underline','strikeThrough'],
+                 ['ul','ol'],
+                 ['justifyLeft','justifyCenter','justifyRight','justifyFull'],
+                 ['indent','outdent'],['html']]">
+    </div>
+
     <a class="btn btn-danger btn-block"
        ng-click="model.widgetDelete()"
        role="button">Delete</a>

@@ -3,5 +3,5 @@
  */
 (function () {
     var app = angular
-        .module("WebAppMaker", ['ngRoute','reorder']);
+        .module("WebAppMaker", ['ngRoute','reorder','textAngular']);
 })();

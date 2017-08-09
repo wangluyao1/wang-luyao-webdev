@@ -15,6 +15,7 @@
         model.widgetNewHeading = widgetNewHeading;
         model.widgetNewImage = widgetNewImage;
         model.widgetNewYoutube = widgetNewYoutube;
+        model.widgetNewHTML = widgetNewHTML;
 
         function init() {
         }
@@ -44,6 +45,11 @@
         function widgetNewYoutube() {
             var typeYoutube = "YOUTUBE";
             widgetNew(typeYoutube);
+        }
+
+        function widgetNewHTML() {
+            var typeHTML = "HTML";
+            widgetNew(typeHTML);
         }
     }
 })();
