@@ -1,0 +1,20 @@
+<div class="col-xs-12">
+    Text
+    <input ng-model="model.widget.text" class="form-control"/>
+    Rows
+    <input ng-model="model.widget.rows" class="form-control" type="number"/>
+    Placeholder
+    <input ng-model="model.widget.placeholder" class="form-control"/>
+    Formatted
+    <input ng-model="model.widget.formatted" type="checkbox"/>
+
+    <div ng-if="model.widget.formatted" text-angular
+         ta-toolbar="[['h1','h2','h3'],['bold','italics','underline','strikeThrough'],
+        ['ul','ol'],['justifyLeft','justifyCenter','justifyRight','justifyFull'],
+        ['indent','outdent'],['html']]"
+    ></div>
+
+    <a class="btn btn-danger btn-block"
+       ng-click="model.widgetDelete()"
+       role="button">Delete</a>
+</div>

@@ -1,0 +1,25 @@
+<div class="col-xs-12">
+    <label for="name">Name</label>
+    <input name="name"
+           ng-model="model.widget.name"
+           type="text"
+           id="name"
+           class="form-control"
+           placeholder="name"
+    />
+
+    <!--<label for="text">Text</label>-->
+    <label>HTML</label>
+    <div ng-model="model.widget.text"
+         text-angular
+         taOptions.toolbar="[['h1','h2','h3'],
+                 ['bold','italics','underline','strikeThrough'],
+                 ['ul','ol'],
+                 ['justifyLeft','justifyCenter','justifyRight','justifyFull'],
+                 ['indent','outdent'],['html']]">
+    </div>
+
+    <a class="btn btn-danger btn-block"
+       ng-click="model.widgetDelete()"
+       role="button">Delete</a>
+</div>
