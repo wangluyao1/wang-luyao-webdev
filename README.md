@@ -7,14 +7,13 @@ This repository is for submitting CS5610 web development assignments and project
 https://wang-luyao-webdev.herokuapp.com/
 
 <h2>Link to Project:</h2>
-https://wang-luyao-webdev.herokuapp.com/project/index.html
+https://what-we-eat.herokuapp.com/#!/
 
 <h2>Link to assignments:</h2>
-Assignment 2:
-https://wang-luyao-webdev.herokuapp.com/assignment/assignment2/
+Assignment 2:<br>
+https://wang-luyao-webdev.herokuapp.com/assignment/assignment2/<br>
+Assignment 3 and Assignment 4:<br>
+https://wang-luyao-webdev.herokuapp.com/assignment/assignment3/<br>
+Assignment 5:<br>
+https://wang-luyao-webdev.herokuapp.com/assignment/assignment5/<br>
 
-Assignment 3 and Assignment 4:
-https://wang-luyao-webdev.herokuapp.com/assignment/assignment3/
-
-Assignment 5
-https://wang-luyao-webdev.herokuapp.com/assignment/assignment5/
