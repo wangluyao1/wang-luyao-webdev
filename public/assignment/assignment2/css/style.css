@@ -1,3 +1,9 @@
+.wl-photo-left{
+    width: 15%;
+    float: left;
+
+}
+
 input {
     margin-bottom: 5px;
 }

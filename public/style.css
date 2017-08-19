@@ -1,0 +1,11 @@
+.wl-photo-left{
+    width: 15%;
+    float: left;
+
+}
+
+.wl-right-intro {
+    white-space: pre-line;
+    float: right;
+    width: 80%;
+}
